@@ -1,0 +1,43 @@
+{
+  "rules": [
+    {
+      "id": "R-SETBACK-URBAN",
+      "description": "Urban setback depends on road width.",
+      "conditions": {
+        "location": "urban"
+      },
+      "logic": [
+        {
+          "if": {
+            "road_width_gte": 12
+          },
+          "setback": 3.0
+        },
+        {
+          "else": true,
+          "setback": 1.5
+        }
+      ]
+    },
+    {
+      "id": "R-COVERAGE",
+      "description": "Max site coverage by location.",
+      "conditions": {},
+      "mapping": {
+        "urban": 0.6,
+        "rural": 0.5,
+        "default": 0.55
+      }
+    },
+    {
+      "id": "R-FAR",
+      "description": "Toy FAR table by location.",
+      "conditions": {},
+      "mapping": {
+        "urban": 1.8,
+        "rural": 1.2,
+        "default": 1.5
+      }
+    }
+  ]
+}

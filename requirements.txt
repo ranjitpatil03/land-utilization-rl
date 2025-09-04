@@ -1,0 +1,7 @@
+numpy
+pandas
+scikit-learn
+stable-baselines3
+langchain
+pymupdf
+requests
