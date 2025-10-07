@@ -1,0 +1,68 @@
+{
+  "case": {
+    "case_id": "ahmedabad-res-001",
+    "city": "Ahmedabad",
+    "location": "urban",
+    "plot_type": "residential",
+    "road_width": 12,
+    "plot_size": 600,
+    "expected_rule_path": [
+      "AHM-DCR-SETBACK",
+      "AHM-DCR-COVERAGE",
+      "AHM-DCR-FAR"
+    ]
+  },
+  "selected_rules": [
+    "AHM-DCR-COVERAGE",
+    "AHM-DCR-SETBACK",
+    "AHM-DCR-FAR"
+  ],
+  "calc": {
+    "inputs": {
+      "case_id": "ahmedabad-res-001",
+      "city": "Ahmedabad",
+      "location": "urban",
+      "plot_type": "residential",
+      "road_width": 12,
+      "plot_size": 600,
+      "expected_rule_path": [
+        "AHM-DCR-SETBACK",
+        "AHM-DCR-COVERAGE",
+        "AHM-DCR-FAR"
+      ]
+    },
+    "setback_m": 3.0,
+    "max_footprint_sqm": 300.0,
+    "total_floor_area_sqm": 1200.0,
+    "steps": [
+      {
+        "rule": "SETBACK",
+        "calc": "road_width=12 -> setback=3.0"
+      },
+      {
+        "rule": "COVERAGE",
+        "calc": "location=urban -> coverage=0.5"
+      },
+      {
+        "rule": "FAR",
+        "calc": "base_FAR=2.0 + additional_FAR=0.0 -> total_FAR=2.0"
+      },
+      {
+        "rule": "RESULTS",
+        "calc": "max_footprint=300.0, total_floor_area=1200.0"
+      }
+    ]
+  },
+  "rl": {
+    "chosen_rule_path": [
+      "AHM-DCR-SETBACK",
+      "AHM-DCR-COVERAGE",
+      "AHM-DCR-FAR"
+    ],
+    "rl_metrics": {
+      "avg_reward": -0.4,
+      "success_rate": 0.3,
+      "episodes": 10
+    }
+  }
+}

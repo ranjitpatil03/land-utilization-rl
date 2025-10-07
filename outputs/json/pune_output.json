@@ -1,0 +1,44 @@
+{
+  "case": {
+    "city": "Pune",
+    "type": "semi-urban",
+    "plot_size": 400
+  },
+  "selected_rules": [],
+  "calc": {
+    "inputs": {
+      "city": "Pune",
+      "type": "semi-urban",
+      "plot_size": 400
+    },
+    "setback_m": 1.5,
+    "max_footprint_sqm": 220.00000000000003,
+    "total_floor_area_sqm": 600.0,
+    "steps": [
+      {
+        "rule": "SETBACK",
+        "calc": "road_width=None -> setback=1.5"
+      },
+      {
+        "rule": "COVERAGE",
+        "calc": "location=default -> coverage=0.55"
+      },
+      {
+        "rule": "FAR",
+        "calc": "base_FAR=1.5 + additional_FAR=0.0 -> total_FAR=1.5"
+      },
+      {
+        "rule": "RESULTS",
+        "calc": "max_footprint=220.00000000000003, total_floor_area=600.0"
+      }
+    ]
+  },
+  "rl": {
+    "chosen_rule_path": [],
+    "rl_metrics": {
+      "avg_reward": 1.0,
+      "success_rate": 1.0,
+      "episodes": 10
+    }
+  }
+}

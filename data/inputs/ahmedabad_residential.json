@@ -1,0 +1,13 @@
+{
+  "case_id": "ahmedabad-res-001",
+  "city": "Ahmedabad",
+  "location": "urban",
+  "plot_type": "residential",
+  "road_width": 12,
+  "plot_size": 600,
+  "expected_rule_path": [
+    "AHM-DCR-SETBACK",
+    "AHM-DCR-COVERAGE",
+    "AHM-DCR-FAR"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "case_id": "mumbai-redev-001",
+  "city": "Mumbai",
+  "location": "urban",
+  "plot_type": "residential",
+  "project_type": "slum_redevelopment",
+  "road_width": 15,
+  "plot_size": 800,
+  "expected_rule_path": [
+    "MUM-DCPR-2034-SETBACK-FRONT",
+    "MUM-DCPR-2034-COVERAGE",
+    "MUM-DCPR-2034-FAR",
+    "MUM-MHADA-REDEVELOPMENT"
+  ]
+}

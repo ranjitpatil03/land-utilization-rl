@@ -1,0 +1,75 @@
+{
+  "case": {
+    "case_id": "mumbai-redev-001",
+    "city": "Mumbai",
+    "location": "urban",
+    "plot_type": "residential",
+    "project_type": "slum_redevelopment",
+    "road_width": 15,
+    "plot_size": 800,
+    "expected_rule_path": [
+      "MUM-DCPR-2034-SETBACK-FRONT",
+      "MUM-DCPR-2034-COVERAGE",
+      "MUM-DCPR-2034-FAR",
+      "MUM-MHADA-REDEVELOPMENT"
+    ]
+  },
+  "selected_rules": [
+    "MUM-DCPR-2034-FAR",
+    "MUM-MHADA-REDEVELOPMENT",
+    "MUM-DCPR-2034-SETBACK-FRONT",
+    "MUM-MCGM-HEIGHT",
+    "MUM-DCPR-2034-COVERAGE"
+  ],
+  "calc": {
+    "inputs": {
+      "case_id": "mumbai-redev-001",
+      "city": "Mumbai",
+      "location": "urban",
+      "plot_type": "residential",
+      "project_type": "slum_redevelopment",
+      "road_width": 15,
+      "plot_size": 800,
+      "expected_rule_path": [
+        "MUM-DCPR-2034-SETBACK-FRONT",
+        "MUM-DCPR-2034-COVERAGE",
+        "MUM-DCPR-2034-FAR",
+        "MUM-MHADA-REDEVELOPMENT"
+      ]
+    },
+    "setback_m": 3.0,
+    "max_footprint_sqm": 520.0,
+    "total_floor_area_sqm": 2000.0,
+    "steps": [
+      {
+        "rule": "SETBACK",
+        "calc": "road_width=15 -> setback=3.0"
+      },
+      {
+        "rule": "COVERAGE",
+        "calc": "location=urban -> coverage=0.65"
+      },
+      {
+        "rule": "FAR",
+        "calc": "base_FAR=1.5 + additional_FAR=1.0 -> total_FAR=2.5"
+      },
+      {
+        "rule": "RESULTS",
+        "calc": "max_footprint=520.0, total_floor_area=2000.0"
+      }
+    ]
+  },
+  "rl": {
+    "chosen_rule_path": [
+      "MUM-DCPR-2034-SETBACK-FRONT",
+      "MUM-DCPR-2034-COVERAGE",
+      "MUM-DCPR-2034-FAR",
+      "MUM-MHADA-REDEVELOPMENT"
+    ],
+    "rl_metrics": {
+      "avg_reward": -0.8,
+      "success_rate": 0.1,
+      "episodes": 10
+    }
+  }
+}

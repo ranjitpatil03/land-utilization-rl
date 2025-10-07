@@ -1,0 +1,46 @@
+{
+  "case": {
+    "case_id": "mumbai-001",
+    "location": "urban",
+    "road_width": 9,
+    "plot_size": 500
+  },
+  "selected_rules": [],
+  "calc": {
+    "inputs": {
+      "case_id": "mumbai-001",
+      "location": "urban",
+      "road_width": 9,
+      "plot_size": 500
+    },
+    "setback_m": 1.5,
+    "max_footprint_sqm": 275.0,
+    "total_floor_area_sqm": 750.0,
+    "steps": [
+      {
+        "rule": "SETBACK",
+        "calc": "road_width=9 -> setback=1.5"
+      },
+      {
+        "rule": "COVERAGE",
+        "calc": "location=urban -> coverage=0.55"
+      },
+      {
+        "rule": "FAR",
+        "calc": "base_FAR=1.5 + additional_FAR=0.0 -> total_FAR=1.5"
+      },
+      {
+        "rule": "RESULTS",
+        "calc": "max_footprint=275.0, total_floor_area=750.0"
+      }
+    ]
+  },
+  "rl": {
+    "chosen_rule_path": [],
+    "rl_metrics": {
+      "avg_reward": 1.0,
+      "success_rate": 1.0,
+      "episodes": 10
+    }
+  }
+}

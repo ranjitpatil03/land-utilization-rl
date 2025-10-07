@@ -1,0 +1,184 @@
+{
+  "rules": [
+    {
+      "id": "MUM-DCPR-2034-SETBACK-FRONT",
+      "authority": "Mumbai DCPR 2034",
+      "clause": "4.2.1",
+      "page": "45",
+      "description": "Front road margin based on road width for residential plots",
+      "conditions": {
+        "city": "Mumbai",
+        "plot_type": "residential"
+      },
+      "logic": [
+        {
+          "if": {
+            "road_width_gte": 24
+          },
+          "setback": 6.0
+        },
+        {
+          "elif": {
+            "road_width_gte": 18
+          },
+          "setback": 4.5
+        },
+        {
+          "elif": {
+            "road_width_gte": 12
+          },
+          "setback": 3.0
+        },
+        {
+          "else": true,
+          "setback": 1.5
+        }
+      ]
+    },
+    {
+      "id": "MUM-DCPR-2034-COVERAGE",
+      "authority": "Mumbai DCPR 2034",
+      "clause": "5.1.2",
+      "page": "52",
+      "description": "Maximum site coverage for residential plots in Mumbai",
+      "conditions": {
+        "city": "Mumbai",
+        "plot_type": "residential"
+      },
+      "mapping": {
+        "default": 0.65
+      }
+    },
+    {
+      "id": "MUM-DCPR-2034-FAR",
+      "authority": "Mumbai DCPR 2034",
+      "clause": "6.3.1",
+      "page": "67",
+      "description": "Floor Area Ratio for residential plots in Mumbai based on road width",
+      "conditions": {
+        "city": "Mumbai",
+        "plot_type": "residential"
+      },
+      "logic": [
+        {
+          "if": {
+            "road_width_gte": 30
+          },
+          "far": 4.0
+        },
+        {
+          "elif": {
+            "road_width_gte": 24
+          },
+          "far": 3.5
+        },
+        {
+          "elif": {
+            "road_width_gte": 18
+          },
+          "far": 3.0
+        },
+        {
+          "elif": {
+            "road_width_gte": 12
+          },
+          "far": 2.5
+        },
+        {
+          "else": true,
+          "far": 2.0
+        }
+      ]
+    },
+    {
+      "id": "MUM-MCGM-HEIGHT",
+      "authority": "MCGM",
+      "clause": "Building Bye-laws 2020, Section 7",
+      "page": "23",
+      "description": "Maximum building height restrictions in Mumbai",
+      "conditions": {
+        "city": "Mumbai"
+      },
+      "mapping": {
+        "default": 45.0
+      }
+    },
+    {
+      "id": "MUM-MHADA-REDEVELOPMENT",
+      "authority": "MHADA",
+      "clause": "Slum Rehabilitation Scheme, Clause 8.2",
+      "page": "31",
+      "description": "Additional FAR for slum rehabilitation projects",
+      "conditions": {
+        "city": "Mumbai",
+        "project_type": "slum_redevelopment"
+      },
+      "mapping": {
+        "default": 1.0
+      }
+    },
+    {
+      "id": "AHM-DCR-SETBACK",
+      "authority": "Ahmedabad DCR",
+      "clause": "Section 4.3",
+      "page": "18",
+      "description": "Setback requirements for residential plots in Ahmedabad",
+      "conditions": {
+        "city": "Ahmedabad",
+        "plot_type": "residential"
+      },
+      "logic": [
+        {
+          "if": {
+            "road_width_gte": 20
+          },
+          "setback": 5.0
+        },
+        {
+          "elif": {
+            "road_width_gte": 15
+          },
+          "setback": 4.0
+        },
+        {
+          "elif": {
+            "road_width_gte": 10
+          },
+          "setback": 3.0
+        },
+        {
+          "else": true,
+          "setback": 2.0
+        }
+      ]
+    },
+    {
+      "id": "AHM-DCR-COVERAGE",
+      "authority": "Ahmedabad DCR",
+      "clause": "Section 5.1",
+      "page": "22",
+      "description": "Maximum site coverage for residential plots in Ahmedabad",
+      "conditions": {
+        "city": "Ahmedabad",
+        "plot_type": "residential"
+      },
+      "mapping": {
+        "default": 0.5
+      }
+    },
+    {
+      "id": "AHM-DCR-FAR",
+      "authority": "Ahmedabad DCR",
+      "clause": "Section 6.2",
+      "page": "28",
+      "description": "Floor Area Ratio for residential plots in Ahmedabad",
+      "conditions": {
+        "city": "Ahmedabad",
+        "plot_type": "residential"
+      },
+      "mapping": {
+        "default": 2.0
+      }
+    }
+  ]
+}
