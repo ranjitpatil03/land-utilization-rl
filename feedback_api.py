@@ -1,4 +1,6 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from typing import List, Optional
 import json
@@ -7,6 +9,18 @@ from datetime import datetime
 from utils.logging_utils import log
 
 app = FastAPI(title="Land Utilization Feedback API", version="1.0.0")
+
+# Add CORS middleware to allow requests from file:// and localhost
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allow all origins for development
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# Serve static files (UI HTML files)
+app.mount("/ui", StaticFiles(directory=".", html=True), name="ui")
 
 # Ensure feedback directory exists
 FEEDBACK_FILE = "feedback.json"

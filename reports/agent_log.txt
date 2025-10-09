@@ -3348,3 +3348,1281 @@
 [01:52:09] Feedback received for case demo-20251006-015207: up
 [01:54:18] Feedback received for case demo-up-20251006-015416: up
 [01:54:21] Feedback received for case demo-down-20251006-015419: down
+[15:31:05] Orchestrator: Starting run for case: data/inputs/mumbai_case.json
+[15:31:05] InputAgent: Loading case from data\inputs\mumbai_case.json
+[15:31:05] InputAgent: Successfully loaded case with keys: ['case_id', 'location', 'road_width', 'plot_size']
+[15:31:05] Would download: https://example.com/regulations.pdf
+[15:31:05] Parsing (stub): rules_kb/sample_rules.json
+[15:31:05] Classification Agent: Starting to select applicable rules.
+[15:31:05] Classification Agent: REJECTED rule MUM-DCPR-2034-SETBACK-FRONT
+[15:31:05] Classification Agent: REJECTED rule MUM-DCPR-2034-COVERAGE
+[15:31:05] Classification Agent: REJECTED rule MUM-DCPR-2034-FAR
+[15:31:05] Classification Agent: REJECTED rule MUM-MCGM-HEIGHT
+[15:31:05] Classification Agent: REJECTED rule MUM-MHADA-REDEVELOPMENT
+[15:31:05] Classification Agent: REJECTED rule AHM-DCR-SETBACK
+[15:31:05] Classification Agent: REJECTED rule AHM-DCR-COVERAGE
+[15:31:05] Classification Agent: REJECTED rule AHM-DCR-FAR
+[15:31:05] Classification Agent: Found 0 applicable rules.
+[15:31:05] Classification Agent: Decision details - REJECTED rule MUM-DCPR-2034-SETBACK-FRONT: Condition mismatch: city=None, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-DCPR-2034-COVERAGE: Condition mismatch: city=None, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-DCPR-2034-FAR: Condition mismatch: city=None, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-MCGM-HEIGHT: Condition mismatch: city=None, expected Mumbai, REJECTED rule MUM-MHADA-REDEVELOPMENT: Condition mismatch: city=None, expected Mumbai, Condition mismatch: project_type=None, expected slum_redevelopment, REJECTED rule AHM-DCR-SETBACK: Condition mismatch: city=None, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential, REJECTED rule AHM-DCR-COVERAGE: Condition mismatch: city=None, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential, REJECTED rule AHM-DCR-FAR: Condition mismatch: city=None, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential
+[15:31:05] Calculation Agent: Starting computations.
+[15:31:05] Calculation Agent: Processing case with plot size: 500 sqm
+[15:31:05] Calculation Agent: Location is urban
+[15:31:05] Calculation Agent: No specific setback rule found, using default: 1.5
+[15:31:05] Calculation Agent: No specific coverage rule found, using default: 0.55
+[15:31:05] Calculation Agent: No specific FAR rule found, using default: 1.5
+[15:31:05] Calculation Agent: No additional FAR rule found
+[15:31:05] Calculation Agent: Max footprint: 275.0 sqm, Total floor area: 750.0 sqm
+[15:31:05] Calculation Agent: Finished. Total floor area: 750.0 sqm.
+[15:31:05] RL Agent: Starting RL decision process.
+[15:31:05] RL Agent: Expected rule path: []
+[15:31:05] RL Agent: Candidate 1 (expected): []
+[15:31:05] RL Agent: Candidate 2 (reversed): []
+[15:31:05] RL Agent: Initializing RL environment and training...
+[15:31:05] RL Environment: Initialized with 2 candidate paths
+[15:31:05] RL Environment: Candidate 0: []
+[15:31:05] RL Environment: Candidate 1: []
+[15:31:05] Training RL (random policy) for 10 episodes...
+[15:31:05] RL Training Summary: {'status': 'training_started', 'episodes': 10}
+[15:31:05] RL Environment: Reset
+[15:31:05] RL Environment: Feedback reward for case mumbai-001: 0
+[15:31:05] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:31:05] RL Training - Episode 1: {'episode': 1, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:31:05] EP 1: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:31:05] RL Environment: Reset
+[15:31:05] RL Environment: Feedback reward for case mumbai-001: 0
+[15:31:05] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:31:05] RL Training - Episode 2: {'episode': 2, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:31:05] EP 2: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:31:05] RL Environment: Reset
+[15:31:05] RL Environment: Feedback reward for case mumbai-001: 0
+[15:31:05] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:31:05] RL Training - Episode 3: {'episode': 3, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:31:05] EP 3: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:31:05] RL Environment: Reset
+[15:31:05] RL Environment: Feedback reward for case mumbai-001: 0
+[15:31:05] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:31:05] RL Training - Episode 4: {'episode': 4, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:31:05] EP 4: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:31:05] RL Environment: Reset
+[15:31:05] RL Environment: Feedback reward for case mumbai-001: 0
+[15:31:05] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:31:05] RL Training - Episode 5: {'episode': 5, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:31:05] EP 5: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:31:05] RL Environment: Reset
+[15:31:05] RL Environment: Feedback reward for case mumbai-001: 0
+[15:31:05] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:31:05] RL Training - Episode 6: {'episode': 6, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:31:05] EP 6: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:31:05] RL Environment: Reset
+[15:31:05] RL Environment: Feedback reward for case mumbai-001: 0
+[15:31:05] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:31:05] RL Training - Episode 7: {'episode': 7, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:31:05] EP 7: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:31:05] RL Environment: Reset
+[15:31:05] RL Environment: Feedback reward for case mumbai-001: 0
+[15:31:05] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:31:05] RL Training - Episode 8: {'episode': 8, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:31:05] EP 8: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:31:05] RL Environment: Reset
+[15:31:05] RL Environment: Feedback reward for case mumbai-001: 0
+[15:31:05] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:31:05] RL Training - Episode 9: {'episode': 9, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:31:05] EP 9: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:31:05] RL Environment: Reset
+[15:31:05] RL Environment: Feedback reward for case mumbai-001: 0
+[15:31:05] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:31:05] RL Training - Episode 10: {'episode': 10, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:31:05] EP 10: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:31:05] Avg reward: 1.00, Success rate: 100.00%
+[15:31:05] RL Training Summary: {'status': 'training_completed', 'avg_reward': 1.0, 'success_rate': 1.0, 'episodes': 10, 'total_reward': 10}
+[15:31:05] RL Agent: Training complete. Metrics: {'avg_reward': 1.0, 'success_rate': 1.0, 'episodes': 10}
+[15:31:05] RL Agent: Process complete.
+[15:31:05] Orchestrator: Saved JSON report to outputs\json\mumbai_output.json
+[15:31:05] Orchestrator: Saved geometry to outputs\geometry\mumbai_model.stl
+[15:31:05] Orchestrator: Run complete.
+[15:31:56] Orchestrator: Starting run for case: data/inputs/mumbai_case.json
+[15:31:56] InputAgent: Loading case from data\inputs\mumbai_case.json
+[15:31:56] InputAgent: Successfully loaded case with keys: ['case_id', 'location', 'road_width', 'plot_size']
+[15:31:56] Would download: https://example.com/regulations.pdf
+[15:31:56] Parsing (stub): rules_kb/sample_rules.json
+[15:31:56] Classification Agent: Starting to select applicable rules.
+[15:31:56] Classification Agent: REJECTED rule MUM-DCPR-2034-SETBACK-FRONT
+[15:31:56] Classification Agent: REJECTED rule MUM-DCPR-2034-COVERAGE
+[15:31:56] Classification Agent: REJECTED rule MUM-DCPR-2034-FAR
+[15:31:56] Classification Agent: REJECTED rule MUM-MCGM-HEIGHT
+[15:31:56] Classification Agent: REJECTED rule MUM-MHADA-REDEVELOPMENT
+[15:31:56] Classification Agent: REJECTED rule AHM-DCR-SETBACK
+[15:31:56] Classification Agent: REJECTED rule AHM-DCR-COVERAGE
+[15:31:56] Classification Agent: REJECTED rule AHM-DCR-FAR
+[15:31:56] Classification Agent: Found 0 applicable rules.
+[15:31:56] Classification Agent: Decision details - REJECTED rule MUM-DCPR-2034-SETBACK-FRONT: Condition mismatch: city=None, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-DCPR-2034-COVERAGE: Condition mismatch: city=None, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-DCPR-2034-FAR: Condition mismatch: city=None, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-MCGM-HEIGHT: Condition mismatch: city=None, expected Mumbai, REJECTED rule MUM-MHADA-REDEVELOPMENT: Condition mismatch: city=None, expected Mumbai, Condition mismatch: project_type=None, expected slum_redevelopment, REJECTED rule AHM-DCR-SETBACK: Condition mismatch: city=None, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential, REJECTED rule AHM-DCR-COVERAGE: Condition mismatch: city=None, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential, REJECTED rule AHM-DCR-FAR: Condition mismatch: city=None, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential
+[15:31:56] Calculation Agent: Starting computations.
+[15:31:56] Calculation Agent: Processing case with plot size: 500 sqm
+[15:31:56] Calculation Agent: Location is urban
+[15:31:56] Calculation Agent: No specific setback rule found, using default: 1.5
+[15:31:56] Calculation Agent: No specific coverage rule found, using default: 0.55
+[15:31:56] Calculation Agent: No specific FAR rule found, using default: 1.5
+[15:31:56] Calculation Agent: No additional FAR rule found
+[15:31:56] Calculation Agent: Max footprint: 275.0 sqm, Total floor area: 750.0 sqm
+[15:31:56] Calculation Agent: Finished. Total floor area: 750.0 sqm.
+[15:31:56] RL Agent: Starting RL decision process.
+[15:31:56] RL Agent: Expected rule path: []
+[15:31:56] RL Agent: Candidate 1 (expected): []
+[15:31:56] RL Agent: Candidate 2 (reversed): []
+[15:31:56] RL Agent: Initializing RL environment and training...
+[15:31:56] RL Environment: Initialized with 2 candidate paths
+[15:31:56] RL Environment: Candidate 0: []
+[15:31:56] RL Environment: Candidate 1: []
+[15:31:56] Training RL (random policy) for 10 episodes...
+[15:31:56] RL Training Summary: {'status': 'training_started', 'episodes': 10}
+[15:31:56] RL Environment: Reset
+[15:31:56] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:31:56] RL Training - Episode 1: {'episode': 1, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:31:56] EP 1: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:31:56] RL Environment: Reset
+[15:31:56] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:31:56] RL Training - Episode 2: {'episode': 2, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:31:56] EP 2: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:31:56] RL Environment: Reset
+[15:31:56] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:31:56] RL Training - Episode 3: {'episode': 3, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:31:56] EP 3: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:31:56] RL Environment: Reset
+[15:31:56] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:31:56] RL Training - Episode 4: {'episode': 4, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:31:56] EP 4: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:31:56] RL Environment: Reset
+[15:31:56] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:31:56] RL Training - Episode 5: {'episode': 5, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:31:56] EP 5: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:31:56] RL Environment: Reset
+[15:31:56] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:31:56] RL Training - Episode 6: {'episode': 6, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:31:56] EP 6: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:31:56] RL Environment: Reset
+[15:31:56] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:31:56] RL Training - Episode 7: {'episode': 7, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:31:56] EP 7: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:31:56] RL Environment: Reset
+[15:31:56] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:31:56] RL Training - Episode 8: {'episode': 8, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:31:56] EP 8: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:31:56] RL Environment: Reset
+[15:31:56] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:31:56] RL Training - Episode 9: {'episode': 9, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:31:56] EP 9: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:31:56] RL Environment: Reset
+[15:31:56] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:31:56] RL Training - Episode 10: {'episode': 10, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:31:56] EP 10: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:31:56] Avg reward: 1.00, Success rate: 100.00%
+[15:31:56] RL Training Summary: {'status': 'training_completed', 'avg_reward': 1.0, 'success_rate': 1.0, 'episodes': 10, 'total_reward': 10}
+[15:31:56] RL Agent: Training complete. Metrics: {'avg_reward': 1.0, 'success_rate': 1.0, 'episodes': 10}
+[15:31:56] RL Agent: Process complete.
+[15:31:56] Orchestrator: Saved JSON report to outputs\json\mumbai_output.json
+[15:31:56] Orchestrator: Saved geometry to outputs\geometry\mumbai_model.stl
+[15:31:56] Orchestrator: Run complete.
+[15:31:56] Orchestrator: Starting run for case: data/inputs/pune_case.json
+[15:31:56] InputAgent: Loading case from data\inputs\pune_case.json
+[15:31:56] InputAgent: Successfully loaded case with keys: ['city', 'type', 'plot_size']
+[15:31:56] Would download: https://example.com/regulations.pdf
+[15:31:56] Parsing (stub): rules_kb/sample_rules.json
+[15:31:56] Classification Agent: Starting to select applicable rules.
+[15:31:56] Classification Agent: REJECTED rule MUM-DCPR-2034-SETBACK-FRONT
+[15:31:56] Classification Agent: REJECTED rule MUM-DCPR-2034-COVERAGE
+[15:31:56] Classification Agent: REJECTED rule MUM-DCPR-2034-FAR
+[15:31:56] Classification Agent: REJECTED rule MUM-MCGM-HEIGHT
+[15:31:56] Classification Agent: REJECTED rule MUM-MHADA-REDEVELOPMENT
+[15:31:56] Classification Agent: REJECTED rule AHM-DCR-SETBACK
+[15:31:56] Classification Agent: REJECTED rule AHM-DCR-COVERAGE
+[15:31:56] Classification Agent: REJECTED rule AHM-DCR-FAR
+[15:31:56] Classification Agent: Found 0 applicable rules.
+[15:31:56] Classification Agent: Decision details - REJECTED rule MUM-DCPR-2034-SETBACK-FRONT: Condition mismatch: city=Pune, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-DCPR-2034-COVERAGE: Condition mismatch: city=Pune, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-DCPR-2034-FAR: Condition mismatch: city=Pune, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-MCGM-HEIGHT: Condition mismatch: city=Pune, expected Mumbai, REJECTED rule MUM-MHADA-REDEVELOPMENT: Condition mismatch: city=Pune, expected Mumbai, Condition mismatch: project_type=None, expected slum_redevelopment, REJECTED rule AHM-DCR-SETBACK: Condition mismatch: city=Pune, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential, REJECTED rule AHM-DCR-COVERAGE: Condition mismatch: city=Pune, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential, REJECTED rule AHM-DCR-FAR: Condition mismatch: city=Pune, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential
+[15:31:56] Calculation Agent: Starting computations.
+[15:31:56] Calculation Agent: Processing case with plot size: 400 sqm
+[15:31:56] Calculation Agent: Location is default
+[15:31:56] Calculation Agent: No specific setback rule found, using default: 1.5
+[15:31:56] Calculation Agent: No specific coverage rule found, using default: 0.55
+[15:31:56] Calculation Agent: No specific FAR rule found, using default: 1.5
+[15:31:56] Calculation Agent: No additional FAR rule found
+[15:31:56] Calculation Agent: Max footprint: 220.00000000000003 sqm, Total floor area: 600.0 sqm
+[15:31:56] Calculation Agent: Finished. Total floor area: 600.0 sqm.
+[15:31:56] RL Agent: Starting RL decision process.
+[15:31:56] RL Agent: Expected rule path: []
+[15:31:56] RL Agent: Candidate 1 (expected): []
+[15:31:56] RL Agent: Candidate 2 (reversed): []
+[15:31:56] RL Agent: Initializing RL environment and training...
+[15:31:56] RL Environment: Initialized with 2 candidate paths
+[15:31:56] RL Environment: Candidate 0: []
+[15:31:56] RL Environment: Candidate 1: []
+[15:31:56] Training RL (random policy) for 10 episodes...
+[15:31:56] RL Training Summary: {'status': 'training_started', 'episodes': 10}
+[15:31:56] RL Environment: Reset
+[15:31:56] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:31:56] RL Training - Episode 1: {'episode': 1, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:31:56] EP 1: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:31:56] RL Environment: Reset
+[15:31:56] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:31:56] RL Training - Episode 2: {'episode': 2, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:31:56] EP 2: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:31:56] RL Environment: Reset
+[15:31:56] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:31:56] RL Training - Episode 3: {'episode': 3, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:31:56] EP 3: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:31:56] RL Environment: Reset
+[15:31:56] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:31:56] RL Training - Episode 4: {'episode': 4, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:31:56] EP 4: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:31:56] RL Environment: Reset
+[15:31:56] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:31:56] RL Training - Episode 5: {'episode': 5, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:31:56] EP 5: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:31:56] RL Environment: Reset
+[15:31:56] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:31:56] RL Training - Episode 6: {'episode': 6, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:31:56] EP 6: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:31:56] RL Environment: Reset
+[15:31:56] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:31:56] RL Training - Episode 7: {'episode': 7, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:31:56] EP 7: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:31:56] RL Environment: Reset
+[15:31:56] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:31:56] RL Training - Episode 8: {'episode': 8, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:31:56] EP 8: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:31:56] RL Environment: Reset
+[15:31:56] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:31:56] RL Training - Episode 9: {'episode': 9, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:31:56] EP 9: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:31:56] RL Environment: Reset
+[15:31:56] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:31:56] RL Training - Episode 10: {'episode': 10, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:31:56] EP 10: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:31:56] Avg reward: 1.00, Success rate: 100.00%
+[15:31:56] RL Training Summary: {'status': 'training_completed', 'avg_reward': 1.0, 'success_rate': 1.0, 'episodes': 10, 'total_reward': 10}
+[15:31:56] RL Agent: Training complete. Metrics: {'avg_reward': 1.0, 'success_rate': 1.0, 'episodes': 10}
+[15:31:56] RL Agent: Process complete.
+[15:31:56] Orchestrator: Saved JSON report to outputs\json\pune_output.json
+[15:31:56] Orchestrator: Saved geometry to outputs\geometry\pune_model.stl
+[15:31:56] Orchestrator: Run complete.
+[15:32:18] Feedback received for case demo-20251007-153216: up
+[15:48:42] Orchestrator: Starting run for case: data/inputs/mumbai_case.json
+[15:48:42] InputAgent: Loading case from data\inputs\mumbai_case.json
+[15:48:42] InputAgent: Successfully loaded case with keys: ['case_id', 'location', 'road_width', 'plot_size']
+[15:48:42] Would download: https://example.com/regulations.pdf
+[15:48:42] Parsing (stub): rules_kb/sample_rules.json
+[15:48:42] Classification Agent: Starting to select applicable rules.
+[15:48:42] Classification Agent: REJECTED rule MUM-DCPR-2034-SETBACK-FRONT
+[15:48:42] Classification Agent: REJECTED rule MUM-DCPR-2034-COVERAGE
+[15:48:42] Classification Agent: REJECTED rule MUM-DCPR-2034-FAR
+[15:48:42] Classification Agent: REJECTED rule MUM-MCGM-HEIGHT
+[15:48:42] Classification Agent: REJECTED rule MUM-MHADA-REDEVELOPMENT
+[15:48:42] Classification Agent: REJECTED rule AHM-DCR-SETBACK
+[15:48:42] Classification Agent: REJECTED rule AHM-DCR-COVERAGE
+[15:48:42] Classification Agent: REJECTED rule AHM-DCR-FAR
+[15:48:42] Classification Agent: Found 0 applicable rules.
+[15:48:42] Classification Agent: Decision details - REJECTED rule MUM-DCPR-2034-SETBACK-FRONT: Condition mismatch: city=None, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-DCPR-2034-COVERAGE: Condition mismatch: city=None, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-DCPR-2034-FAR: Condition mismatch: city=None, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-MCGM-HEIGHT: Condition mismatch: city=None, expected Mumbai, REJECTED rule MUM-MHADA-REDEVELOPMENT: Condition mismatch: city=None, expected Mumbai, Condition mismatch: project_type=None, expected slum_redevelopment, REJECTED rule AHM-DCR-SETBACK: Condition mismatch: city=None, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential, REJECTED rule AHM-DCR-COVERAGE: Condition mismatch: city=None, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential, REJECTED rule AHM-DCR-FAR: Condition mismatch: city=None, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential
+[15:48:42] Calculation Agent: Starting computations.
+[15:48:42] Calculation Agent: Processing case with plot size: 500 sqm
+[15:48:42] Calculation Agent: Location is urban
+[15:48:42] Calculation Agent: No specific setback rule found, using default: 1.5
+[15:48:42] Calculation Agent: No specific coverage rule found, using default: 0.55
+[15:48:42] Calculation Agent: No specific FAR rule found, using default: 1.5
+[15:48:42] Calculation Agent: No additional FAR rule found
+[15:48:42] Calculation Agent: Max footprint: 275.0 sqm, Total floor area: 750.0 sqm
+[15:48:42] Calculation Agent: Finished. Total floor area: 750.0 sqm.
+[15:48:42] RL Agent: Starting RL decision process.
+[15:48:42] RL Agent: Expected rule path: []
+[15:48:42] RL Agent: Candidate 1 (expected): []
+[15:48:42] RL Agent: Candidate 2 (reversed): []
+[15:48:42] RL Agent: Initializing RL environment and training...
+[15:48:42] RL Environment: Initialized with 2 candidate paths
+[15:48:42] RL Environment: Candidate 0: []
+[15:48:42] RL Environment: Candidate 1: []
+[15:48:42] Training RL (random policy) for 10 episodes...
+[15:48:42] RL Training Summary: {'status': 'training_started', 'episodes': 10}
+[15:48:42] RL Environment: Reset
+[15:48:42] RL Environment: Feedback reward for case mumbai-001: 0
+[15:48:42] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:48:42] RL Training - Episode 1: {'episode': 1, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:48:42] EP 1: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:48:42] RL Environment: Reset
+[15:48:42] RL Environment: Feedback reward for case mumbai-001: 0
+[15:48:42] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:48:42] RL Training - Episode 2: {'episode': 2, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:48:42] EP 2: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:48:42] RL Environment: Reset
+[15:48:42] RL Environment: Feedback reward for case mumbai-001: 0
+[15:48:42] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:48:42] RL Training - Episode 3: {'episode': 3, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:48:42] EP 3: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:48:42] RL Environment: Reset
+[15:48:42] RL Environment: Feedback reward for case mumbai-001: 0
+[15:48:42] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:48:42] RL Training - Episode 4: {'episode': 4, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:48:42] EP 4: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:48:42] RL Environment: Reset
+[15:48:42] RL Environment: Feedback reward for case mumbai-001: 0
+[15:48:42] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:48:42] RL Training - Episode 5: {'episode': 5, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:48:42] EP 5: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:48:42] RL Environment: Reset
+[15:48:42] RL Environment: Feedback reward for case mumbai-001: 0
+[15:48:42] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:48:42] RL Training - Episode 6: {'episode': 6, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:48:42] EP 6: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:48:42] RL Environment: Reset
+[15:48:42] RL Environment: Feedback reward for case mumbai-001: 0
+[15:48:42] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:48:42] RL Training - Episode 7: {'episode': 7, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:48:42] EP 7: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:48:42] RL Environment: Reset
+[15:48:42] RL Environment: Feedback reward for case mumbai-001: 0
+[15:48:42] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:48:42] RL Training - Episode 8: {'episode': 8, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:48:42] EP 8: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:48:42] RL Environment: Reset
+[15:48:42] RL Environment: Feedback reward for case mumbai-001: 0
+[15:48:42] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:48:42] RL Training - Episode 9: {'episode': 9, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:48:42] EP 9: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:48:42] RL Environment: Reset
+[15:48:42] RL Environment: Feedback reward for case mumbai-001: 0
+[15:48:42] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[15:48:42] RL Training - Episode 10: {'episode': 10, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[15:48:42] EP 10: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[15:48:42] Avg reward: 1.00, Success rate: 100.00%
+[15:48:42] RL Training Summary: {'status': 'training_completed', 'avg_reward': 1.0, 'success_rate': 1.0, 'episodes': 10, 'total_reward': 10}
+[15:48:42] RL Agent: Training complete. Metrics: {'avg_reward': 1.0, 'success_rate': 1.0, 'episodes': 10}
+[15:48:42] RL Agent: Process complete.
+[15:48:42] Orchestrator: Saved JSON report to outputs\json\mumbai_output.json
+[15:48:42] Orchestrator: Saved geometry to outputs\geometry\mumbai_model.stl
+[15:48:42] Orchestrator: Run complete.
+[16:08:23] Feedback received for case mumbai_redevelopment: up
+[16:20:58] Orchestrator: Starting run for case: data/inputs/mumbai_case.json
+[16:20:58] InputAgent: Loading case from data\inputs\mumbai_case.json
+[16:20:58] InputAgent: Successfully loaded case with keys: ['case_id', 'location', 'road_width', 'plot_size']
+[16:20:58] Would download: https://example.com/regulations.pdf
+[16:20:58] Parsing (stub): rules_kb/sample_rules.json
+[16:20:58] Classification Agent: Starting to select applicable rules.
+[16:20:58] Classification Agent: REJECTED rule MUM-DCPR-2034-SETBACK-FRONT
+[16:20:58] Classification Agent: REJECTED rule MUM-DCPR-2034-COVERAGE
+[16:20:58] Classification Agent: REJECTED rule MUM-DCPR-2034-FAR
+[16:20:58] Classification Agent: REJECTED rule MUM-MCGM-HEIGHT
+[16:20:58] Classification Agent: REJECTED rule MUM-MHADA-REDEVELOPMENT
+[16:20:58] Classification Agent: REJECTED rule AHM-DCR-SETBACK
+[16:20:58] Classification Agent: REJECTED rule AHM-DCR-COVERAGE
+[16:20:58] Classification Agent: REJECTED rule AHM-DCR-FAR
+[16:20:58] Classification Agent: Found 0 applicable rules.
+[16:20:58] Classification Agent: Decision details - REJECTED rule MUM-DCPR-2034-SETBACK-FRONT: Condition mismatch: city=None, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-DCPR-2034-COVERAGE: Condition mismatch: city=None, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-DCPR-2034-FAR: Condition mismatch: city=None, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-MCGM-HEIGHT: Condition mismatch: city=None, expected Mumbai, REJECTED rule MUM-MHADA-REDEVELOPMENT: Condition mismatch: city=None, expected Mumbai, Condition mismatch: project_type=None, expected slum_redevelopment, REJECTED rule AHM-DCR-SETBACK: Condition mismatch: city=None, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential, REJECTED rule AHM-DCR-COVERAGE: Condition mismatch: city=None, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential, REJECTED rule AHM-DCR-FAR: Condition mismatch: city=None, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential
+[16:20:58] Calculation Agent: Starting computations.
+[16:20:58] Calculation Agent: Processing case with plot size: 500 sqm
+[16:20:58] Calculation Agent: Location is urban
+[16:20:58] Calculation Agent: No specific setback rule found, using default: 1.5
+[16:20:58] Calculation Agent: No specific coverage rule found, using default: 0.55
+[16:20:58] Calculation Agent: No specific FAR rule found, using default: 1.5
+[16:20:58] Calculation Agent: No additional FAR rule found
+[16:20:58] Calculation Agent: Max footprint: 275.0 sqm, Total floor area: 750.0 sqm
+[16:20:58] Calculation Agent: Finished. Total floor area: 750.0 sqm.
+[16:20:58] RL Agent: Starting RL decision process.
+[16:20:58] RL Agent: Expected rule path: []
+[16:20:58] RL Agent: Candidate 1 (expected): []
+[16:20:58] RL Agent: Candidate 2 (reversed): []
+[16:20:58] RL Agent: Initializing RL environment and training...
+[16:20:58] RL Environment: Initialized with 2 candidate paths
+[16:20:58] RL Environment: Candidate 0: []
+[16:20:58] RL Environment: Candidate 1: []
+[16:20:58] Training RL (random policy) for 10 episodes...
+[16:20:58] RL Training Summary: {'status': 'training_started', 'episodes': 10}
+[16:20:58] RL Environment: Reset
+[16:20:58] RL Environment: Feedback reward for case mumbai-001: 0
+[16:20:58] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[16:20:58] RL Training - Episode 1: {'episode': 1, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[16:20:58] EP 1: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[16:20:58] RL Environment: Reset
+[16:20:58] RL Environment: Feedback reward for case mumbai-001: 0
+[16:20:58] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[16:20:58] RL Training - Episode 2: {'episode': 2, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[16:20:58] EP 2: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[16:20:58] RL Environment: Reset
+[16:20:58] RL Environment: Feedback reward for case mumbai-001: 0
+[16:20:58] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[16:20:58] RL Training - Episode 3: {'episode': 3, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[16:20:58] EP 3: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[16:20:58] RL Environment: Reset
+[16:20:58] RL Environment: Feedback reward for case mumbai-001: 0
+[16:20:58] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[16:20:58] RL Training - Episode 4: {'episode': 4, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[16:20:58] EP 4: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[16:20:58] RL Environment: Reset
+[16:20:58] RL Environment: Feedback reward for case mumbai-001: 0
+[16:20:58] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[16:20:58] RL Training - Episode 5: {'episode': 5, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[16:20:58] EP 5: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[16:20:58] RL Environment: Reset
+[16:20:58] RL Environment: Feedback reward for case mumbai-001: 0
+[16:20:58] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[16:20:58] RL Training - Episode 6: {'episode': 6, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[16:20:58] EP 6: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[16:20:58] RL Environment: Reset
+[16:20:58] RL Environment: Feedback reward for case mumbai-001: 0
+[16:20:58] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[16:20:58] RL Training - Episode 7: {'episode': 7, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[16:20:58] EP 7: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[16:20:58] RL Environment: Reset
+[16:20:58] RL Environment: Feedback reward for case mumbai-001: 0
+[16:20:58] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[16:20:58] RL Training - Episode 8: {'episode': 8, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[16:20:58] EP 8: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[16:20:58] RL Environment: Reset
+[16:20:58] RL Environment: Feedback reward for case mumbai-001: 0
+[16:20:58] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[16:20:58] RL Training - Episode 9: {'episode': 9, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[16:20:58] EP 9: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[16:20:58] RL Environment: Reset
+[16:20:58] RL Environment: Feedback reward for case mumbai-001: 0
+[16:20:58] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[16:20:58] RL Training - Episode 10: {'episode': 10, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[16:20:58] EP 10: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[16:20:58] Avg reward: 1.00, Success rate: 100.00%
+[16:20:58] RL Training Summary: {'status': 'training_completed', 'avg_reward': 1.0, 'success_rate': 1.0, 'episodes': 10, 'total_reward': 10}
+[16:20:58] RL Agent: Training complete. Metrics: {'avg_reward': 1.0, 'success_rate': 1.0, 'episodes': 10}
+[16:20:58] RL Agent: Process complete.
+[16:20:58] Orchestrator: Saved JSON report to outputs\json\mumbai_output.json
+[16:20:58] Orchestrator: Saved geometry to outputs\geometry\mumbai_model.stl
+[16:20:58] Orchestrator: Run complete.
+[16:21:35] Orchestrator: Starting run for case: data/inputs/mumbai_case.json
+[16:21:35] InputAgent: Loading case from data\inputs\mumbai_case.json
+[16:21:35] InputAgent: Successfully loaded case with keys: ['case_id', 'location', 'road_width', 'plot_size']
+[16:21:35] Would download: https://example.com/regulations.pdf
+[16:21:35] Parsing (stub): rules_kb/sample_rules.json
+[16:21:35] Classification Agent: Starting to select applicable rules.
+[16:21:35] Classification Agent: REJECTED rule MUM-DCPR-2034-SETBACK-FRONT
+[16:21:35] Classification Agent: REJECTED rule MUM-DCPR-2034-COVERAGE
+[16:21:35] Classification Agent: REJECTED rule MUM-DCPR-2034-FAR
+[16:21:35] Classification Agent: REJECTED rule MUM-MCGM-HEIGHT
+[16:21:35] Classification Agent: REJECTED rule MUM-MHADA-REDEVELOPMENT
+[16:21:35] Classification Agent: REJECTED rule AHM-DCR-SETBACK
+[16:21:35] Classification Agent: REJECTED rule AHM-DCR-COVERAGE
+[16:21:35] Classification Agent: REJECTED rule AHM-DCR-FAR
+[16:21:35] Classification Agent: Found 0 applicable rules.
+[16:21:35] Classification Agent: Decision details - REJECTED rule MUM-DCPR-2034-SETBACK-FRONT: Condition mismatch: city=None, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-DCPR-2034-COVERAGE: Condition mismatch: city=None, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-DCPR-2034-FAR: Condition mismatch: city=None, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-MCGM-HEIGHT: Condition mismatch: city=None, expected Mumbai, REJECTED rule MUM-MHADA-REDEVELOPMENT: Condition mismatch: city=None, expected Mumbai, Condition mismatch: project_type=None, expected slum_redevelopment, REJECTED rule AHM-DCR-SETBACK: Condition mismatch: city=None, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential, REJECTED rule AHM-DCR-COVERAGE: Condition mismatch: city=None, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential, REJECTED rule AHM-DCR-FAR: Condition mismatch: city=None, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential
+[16:21:35] Calculation Agent: Starting computations.
+[16:21:35] Calculation Agent: Processing case with plot size: 500 sqm
+[16:21:35] Calculation Agent: Location is urban
+[16:21:35] Calculation Agent: No specific setback rule found, using default: 1.5
+[16:21:35] Calculation Agent: No specific coverage rule found, using default: 0.55
+[16:21:35] Calculation Agent: No specific FAR rule found, using default: 1.5
+[16:21:35] Calculation Agent: No additional FAR rule found
+[16:21:35] Calculation Agent: Max footprint: 275.0 sqm, Total floor area: 750.0 sqm
+[16:21:35] Calculation Agent: Finished. Total floor area: 750.0 sqm.
+[16:21:35] RL Agent: Starting RL decision process.
+[16:21:35] RL Agent: Expected rule path: []
+[16:21:35] RL Agent: Candidate 1 (expected): []
+[16:21:35] RL Agent: Candidate 2 (reversed): []
+[16:21:35] RL Agent: Initializing RL environment and training...
+[16:21:35] RL Environment: Initialized with 2 candidate paths
+[16:21:35] RL Environment: Candidate 0: []
+[16:21:35] RL Environment: Candidate 1: []
+[16:21:35] Training RL (random policy) for 10 episodes...
+[16:21:35] RL Training Summary: {'status': 'training_started', 'episodes': 10}
+[16:21:35] RL Environment: Reset
+[16:21:35] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[16:21:35] RL Training - Episode 1: {'episode': 1, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[16:21:35] EP 1: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[16:21:35] RL Environment: Reset
+[16:21:35] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[16:21:35] RL Training - Episode 2: {'episode': 2, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[16:21:35] EP 2: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[16:21:35] RL Environment: Reset
+[16:21:35] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[16:21:35] RL Training - Episode 3: {'episode': 3, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[16:21:35] EP 3: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[16:21:35] RL Environment: Reset
+[16:21:35] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[16:21:35] RL Training - Episode 4: {'episode': 4, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[16:21:35] EP 4: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[16:21:35] RL Environment: Reset
+[16:21:35] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[16:21:35] RL Training - Episode 5: {'episode': 5, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[16:21:35] EP 5: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[16:21:35] RL Environment: Reset
+[16:21:35] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[16:21:35] RL Training - Episode 6: {'episode': 6, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[16:21:35] EP 6: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[16:21:35] RL Environment: Reset
+[16:21:35] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[16:21:35] RL Training - Episode 7: {'episode': 7, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[16:21:35] EP 7: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[16:21:35] RL Environment: Reset
+[16:21:35] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[16:21:35] RL Training - Episode 8: {'episode': 8, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[16:21:35] EP 8: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[16:21:35] RL Environment: Reset
+[16:21:35] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[16:21:35] RL Training - Episode 9: {'episode': 9, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[16:21:35] EP 9: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[16:21:35] RL Environment: Reset
+[16:21:35] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[16:21:35] RL Training - Episode 10: {'episode': 10, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[16:21:35] EP 10: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[16:21:35] Avg reward: 1.00, Success rate: 100.00%
+[16:21:35] RL Training Summary: {'status': 'training_completed', 'avg_reward': 1.0, 'success_rate': 1.0, 'episodes': 10, 'total_reward': 10}
+[16:21:35] RL Agent: Training complete. Metrics: {'avg_reward': 1.0, 'success_rate': 1.0, 'episodes': 10}
+[16:21:35] RL Agent: Process complete.
+[16:21:35] Orchestrator: Saved JSON report to outputs\json\mumbai_output.json
+[16:21:35] Orchestrator: Saved geometry to outputs\geometry\mumbai_model.stl
+[16:21:35] Orchestrator: Run complete.
+[16:21:35] Orchestrator: Starting run for case: data/inputs/pune_case.json
+[16:21:35] InputAgent: Loading case from data\inputs\pune_case.json
+[16:21:35] InputAgent: Successfully loaded case with keys: ['city', 'type', 'plot_size']
+[16:21:35] Would download: https://example.com/regulations.pdf
+[16:21:35] Parsing (stub): rules_kb/sample_rules.json
+[16:21:35] Classification Agent: Starting to select applicable rules.
+[16:21:35] Classification Agent: REJECTED rule MUM-DCPR-2034-SETBACK-FRONT
+[16:21:35] Classification Agent: REJECTED rule MUM-DCPR-2034-COVERAGE
+[16:21:35] Classification Agent: REJECTED rule MUM-DCPR-2034-FAR
+[16:21:35] Classification Agent: REJECTED rule MUM-MCGM-HEIGHT
+[16:21:35] Classification Agent: REJECTED rule MUM-MHADA-REDEVELOPMENT
+[16:21:35] Classification Agent: REJECTED rule AHM-DCR-SETBACK
+[16:21:35] Classification Agent: REJECTED rule AHM-DCR-COVERAGE
+[16:21:35] Classification Agent: REJECTED rule AHM-DCR-FAR
+[16:21:35] Classification Agent: Found 0 applicable rules.
+[16:21:35] Classification Agent: Decision details - REJECTED rule MUM-DCPR-2034-SETBACK-FRONT: Condition mismatch: city=Pune, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-DCPR-2034-COVERAGE: Condition mismatch: city=Pune, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-DCPR-2034-FAR: Condition mismatch: city=Pune, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-MCGM-HEIGHT: Condition mismatch: city=Pune, expected Mumbai, REJECTED rule MUM-MHADA-REDEVELOPMENT: Condition mismatch: city=Pune, expected Mumbai, Condition mismatch: project_type=None, expected slum_redevelopment, REJECTED rule AHM-DCR-SETBACK: Condition mismatch: city=Pune, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential, REJECTED rule AHM-DCR-COVERAGE: Condition mismatch: city=Pune, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential, REJECTED rule AHM-DCR-FAR: Condition mismatch: city=Pune, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential
+[16:21:35] Calculation Agent: Starting computations.
+[16:21:35] Calculation Agent: Processing case with plot size: 400 sqm
+[16:21:35] Calculation Agent: Location is default
+[16:21:35] Calculation Agent: No specific setback rule found, using default: 1.5
+[16:21:35] Calculation Agent: No specific coverage rule found, using default: 0.55
+[16:21:35] Calculation Agent: No specific FAR rule found, using default: 1.5
+[16:21:35] Calculation Agent: No additional FAR rule found
+[16:21:35] Calculation Agent: Max footprint: 220.00000000000003 sqm, Total floor area: 600.0 sqm
+[16:21:35] Calculation Agent: Finished. Total floor area: 600.0 sqm.
+[16:21:35] RL Agent: Starting RL decision process.
+[16:21:35] RL Agent: Expected rule path: []
+[16:21:35] RL Agent: Candidate 1 (expected): []
+[16:21:35] RL Agent: Candidate 2 (reversed): []
+[16:21:35] RL Agent: Initializing RL environment and training...
+[16:21:35] RL Environment: Initialized with 2 candidate paths
+[16:21:35] RL Environment: Candidate 0: []
+[16:21:35] RL Environment: Candidate 1: []
+[16:21:35] Training RL (random policy) for 10 episodes...
+[16:21:35] RL Training Summary: {'status': 'training_started', 'episodes': 10}
+[16:21:35] RL Environment: Reset
+[16:21:35] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[16:21:35] RL Training - Episode 1: {'episode': 1, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[16:21:35] EP 1: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[16:21:35] RL Environment: Reset
+[16:21:35] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[16:21:35] RL Training - Episode 2: {'episode': 2, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[16:21:35] EP 2: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[16:21:35] RL Environment: Reset
+[16:21:35] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[16:21:35] RL Training - Episode 3: {'episode': 3, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[16:21:35] EP 3: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[16:21:35] RL Environment: Reset
+[16:21:35] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[16:21:35] RL Training - Episode 4: {'episode': 4, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[16:21:35] EP 4: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[16:21:35] RL Environment: Reset
+[16:21:35] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[16:21:35] RL Training - Episode 5: {'episode': 5, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[16:21:35] EP 5: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[16:21:35] RL Environment: Reset
+[16:21:35] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[16:21:35] RL Training - Episode 6: {'episode': 6, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[16:21:35] EP 6: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[16:21:35] RL Environment: Reset
+[16:21:35] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[16:21:35] RL Training - Episode 7: {'episode': 7, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[16:21:35] EP 7: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[16:21:35] RL Environment: Reset
+[16:21:35] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[16:21:35] RL Training - Episode 8: {'episode': 8, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[16:21:35] EP 8: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[16:21:35] RL Environment: Reset
+[16:21:35] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[16:21:35] RL Training - Episode 9: {'episode': 9, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[16:21:35] EP 9: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[16:21:35] RL Environment: Reset
+[16:21:35] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[16:21:35] RL Training - Episode 10: {'episode': 10, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[16:21:35] EP 10: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[16:21:35] Avg reward: 1.00, Success rate: 100.00%
+[16:21:35] RL Training Summary: {'status': 'training_completed', 'avg_reward': 1.0, 'success_rate': 1.0, 'episodes': 10, 'total_reward': 10}
+[16:21:35] RL Agent: Training complete. Metrics: {'avg_reward': 1.0, 'success_rate': 1.0, 'episodes': 10}
+[16:21:35] RL Agent: Process complete.
+[16:21:35] Orchestrator: Saved JSON report to outputs\json\pune_output.json
+[16:21:35] Orchestrator: Saved geometry to outputs\geometry\pune_model.stl
+[16:21:35] Orchestrator: Run complete.
+[18:19:57] Orchestrator: Starting run for case: data/inputs/mumbai_case.json
+[18:19:57] InputAgent: Loading case from data\inputs\mumbai_case.json
+[18:19:57] InputAgent: Successfully loaded case with keys: ['case_id', 'location', 'road_width', 'plot_size']
+[18:19:57] Would download: https://example.com/regulations.pdf
+[18:19:57] Parsing (stub): rules_kb/sample_rules.json
+[18:19:57] Classification Agent: Starting to select applicable rules.
+[18:19:57] Classification Agent: REJECTED rule MUM-DCPR-2034-SETBACK-FRONT
+[18:19:57] Classification Agent: REJECTED rule MUM-DCPR-2034-COVERAGE
+[18:19:57] Classification Agent: REJECTED rule MUM-DCPR-2034-FAR
+[18:19:57] Classification Agent: REJECTED rule MUM-MCGM-HEIGHT
+[18:19:57] Classification Agent: REJECTED rule MUM-MHADA-REDEVELOPMENT
+[18:19:57] Classification Agent: REJECTED rule AHM-DCR-SETBACK
+[18:19:57] Classification Agent: REJECTED rule AHM-DCR-COVERAGE
+[18:19:57] Classification Agent: REJECTED rule AHM-DCR-FAR
+[18:19:57] Classification Agent: Found 0 applicable rules.
+[18:19:57] Classification Agent: Decision details - REJECTED rule MUM-DCPR-2034-SETBACK-FRONT: Condition mismatch: city=None, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-DCPR-2034-COVERAGE: Condition mismatch: city=None, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-DCPR-2034-FAR: Condition mismatch: city=None, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-MCGM-HEIGHT: Condition mismatch: city=None, expected Mumbai, REJECTED rule MUM-MHADA-REDEVELOPMENT: Condition mismatch: city=None, expected Mumbai, Condition mismatch: project_type=None, expected slum_redevelopment, REJECTED rule AHM-DCR-SETBACK: Condition mismatch: city=None, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential, REJECTED rule AHM-DCR-COVERAGE: Condition mismatch: city=None, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential, REJECTED rule AHM-DCR-FAR: Condition mismatch: city=None, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential
+[18:19:57] Calculation Agent: Starting computations.
+[18:19:57] Calculation Agent: Processing case with plot size: 500 sqm
+[18:19:57] Calculation Agent: Location is urban
+[18:19:57] Calculation Agent: No specific setback rule found, using default: 1.5
+[18:19:57] Calculation Agent: No specific coverage rule found, using default: 0.55
+[18:19:57] Calculation Agent: No specific FAR rule found, using default: 1.5
+[18:19:57] Calculation Agent: No additional FAR rule found
+[18:19:57] Calculation Agent: Max footprint: 275.0 sqm, Total floor area: 750.0 sqm
+[18:19:57] Calculation Agent: Finished. Total floor area: 750.0 sqm.
+[18:19:57] RL Agent: Starting RL decision process.
+[18:19:57] RL Agent: Expected rule path: []
+[18:19:57] RL Agent: Candidate 1 (expected): []
+[18:19:57] RL Agent: Candidate 2 (reversed): []
+[18:19:57] RL Agent: Initializing RL environment and training...
+[18:19:57] RL Environment: Initialized with 2 candidate paths
+[18:19:57] RL Environment: Candidate 0: []
+[18:19:57] RL Environment: Candidate 1: []
+[18:19:57] Training RL (random policy) for 10 episodes...
+[18:19:57] RL Training Summary: {'status': 'training_started', 'episodes': 10}
+[18:19:57] RL Environment: Reset
+[18:19:57] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:19:57] RL Training - Episode 1: {'episode': 1, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:19:57] EP 1: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:19:57] RL Environment: Reset
+[18:19:57] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:19:57] RL Training - Episode 2: {'episode': 2, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:19:57] EP 2: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:19:57] RL Environment: Reset
+[18:19:57] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:19:57] RL Training - Episode 3: {'episode': 3, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:19:57] EP 3: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:19:57] RL Environment: Reset
+[18:19:57] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:19:57] RL Training - Episode 4: {'episode': 4, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:19:57] EP 4: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:19:57] RL Environment: Reset
+[18:19:57] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:19:57] RL Training - Episode 5: {'episode': 5, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:19:57] EP 5: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:19:57] RL Environment: Reset
+[18:19:57] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:19:57] RL Training - Episode 6: {'episode': 6, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:19:57] EP 6: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:19:57] RL Environment: Reset
+[18:19:57] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:19:57] RL Training - Episode 7: {'episode': 7, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:19:57] EP 7: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:19:57] RL Environment: Reset
+[18:19:57] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:19:57] RL Training - Episode 8: {'episode': 8, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:19:57] EP 8: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:19:57] RL Environment: Reset
+[18:19:57] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:19:57] RL Training - Episode 9: {'episode': 9, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:19:57] EP 9: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:19:57] RL Environment: Reset
+[18:19:57] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:19:57] RL Training - Episode 10: {'episode': 10, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:19:57] EP 10: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:19:57] Avg reward: 1.00, Success rate: 100.00%
+[18:19:57] RL Training Summary: {'status': 'training_completed', 'avg_reward': 1.0, 'success_rate': 1.0, 'episodes': 10, 'total_reward': 10}
+[18:19:57] RL Agent: Training complete. Metrics: {'avg_reward': 1.0, 'success_rate': 1.0, 'episodes': 10}
+[18:19:57] RL Agent: Process complete.
+[18:19:57] Orchestrator: Saved JSON report to outputs\json\mumbai_output.json
+[18:19:57] Orchestrator: Saved geometry to outputs\geometry\mumbai_model.stl
+[18:19:57] Orchestrator: Run complete.
+[18:20:04] Orchestrator: Starting run for case: data/inputs/pune_case.json
+[18:20:04] InputAgent: Loading case from data\inputs\pune_case.json
+[18:20:04] InputAgent: Successfully loaded case with keys: ['city', 'type', 'plot_size']
+[18:20:04] Would download: https://example.com/regulations.pdf
+[18:20:04] Parsing (stub): rules_kb/sample_rules.json
+[18:20:04] Classification Agent: Starting to select applicable rules.
+[18:20:04] Classification Agent: REJECTED rule MUM-DCPR-2034-SETBACK-FRONT
+[18:20:04] Classification Agent: REJECTED rule MUM-DCPR-2034-COVERAGE
+[18:20:04] Classification Agent: REJECTED rule MUM-DCPR-2034-FAR
+[18:20:04] Classification Agent: REJECTED rule MUM-MCGM-HEIGHT
+[18:20:04] Classification Agent: REJECTED rule MUM-MHADA-REDEVELOPMENT
+[18:20:04] Classification Agent: REJECTED rule AHM-DCR-SETBACK
+[18:20:04] Classification Agent: REJECTED rule AHM-DCR-COVERAGE
+[18:20:04] Classification Agent: REJECTED rule AHM-DCR-FAR
+[18:20:04] Classification Agent: Found 0 applicable rules.
+[18:20:04] Classification Agent: Decision details - REJECTED rule MUM-DCPR-2034-SETBACK-FRONT: Condition mismatch: city=Pune, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-DCPR-2034-COVERAGE: Condition mismatch: city=Pune, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-DCPR-2034-FAR: Condition mismatch: city=Pune, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-MCGM-HEIGHT: Condition mismatch: city=Pune, expected Mumbai, REJECTED rule MUM-MHADA-REDEVELOPMENT: Condition mismatch: city=Pune, expected Mumbai, Condition mismatch: project_type=None, expected slum_redevelopment, REJECTED rule AHM-DCR-SETBACK: Condition mismatch: city=Pune, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential, REJECTED rule AHM-DCR-COVERAGE: Condition mismatch: city=Pune, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential, REJECTED rule AHM-DCR-FAR: Condition mismatch: city=Pune, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential
+[18:20:04] Calculation Agent: Starting computations.
+[18:20:04] Calculation Agent: Processing case with plot size: 400 sqm
+[18:20:04] Calculation Agent: Location is default
+[18:20:04] Calculation Agent: No specific setback rule found, using default: 1.5
+[18:20:04] Calculation Agent: No specific coverage rule found, using default: 0.55
+[18:20:04] Calculation Agent: No specific FAR rule found, using default: 1.5
+[18:20:04] Calculation Agent: No additional FAR rule found
+[18:20:04] Calculation Agent: Max footprint: 220.00000000000003 sqm, Total floor area: 600.0 sqm
+[18:20:04] Calculation Agent: Finished. Total floor area: 600.0 sqm.
+[18:20:04] RL Agent: Starting RL decision process.
+[18:20:04] RL Agent: Expected rule path: []
+[18:20:04] RL Agent: Candidate 1 (expected): []
+[18:20:04] RL Agent: Candidate 2 (reversed): []
+[18:20:04] RL Agent: Initializing RL environment and training...
+[18:20:04] RL Environment: Initialized with 2 candidate paths
+[18:20:04] RL Environment: Candidate 0: []
+[18:20:04] RL Environment: Candidate 1: []
+[18:20:04] Training RL (random policy) for 10 episodes...
+[18:20:04] RL Training Summary: {'status': 'training_started', 'episodes': 10}
+[18:20:04] RL Environment: Reset
+[18:20:04] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:20:04] RL Training - Episode 1: {'episode': 1, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:20:04] EP 1: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:20:04] RL Environment: Reset
+[18:20:04] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:20:04] RL Training - Episode 2: {'episode': 2, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:20:04] EP 2: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:20:04] RL Environment: Reset
+[18:20:04] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:20:04] RL Training - Episode 3: {'episode': 3, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:20:04] EP 3: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:20:04] RL Environment: Reset
+[18:20:04] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:20:04] RL Training - Episode 4: {'episode': 4, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:20:04] EP 4: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:20:04] RL Environment: Reset
+[18:20:04] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:20:04] RL Training - Episode 5: {'episode': 5, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:20:04] EP 5: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:20:04] RL Environment: Reset
+[18:20:04] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:20:04] RL Training - Episode 6: {'episode': 6, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:20:04] EP 6: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:20:04] RL Environment: Reset
+[18:20:04] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:20:04] RL Training - Episode 7: {'episode': 7, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:20:04] EP 7: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:20:04] RL Environment: Reset
+[18:20:04] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:20:04] RL Training - Episode 8: {'episode': 8, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:20:04] EP 8: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:20:04] RL Environment: Reset
+[18:20:04] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:20:04] RL Training - Episode 9: {'episode': 9, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:20:04] EP 9: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:20:04] RL Environment: Reset
+[18:20:04] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:20:04] RL Training - Episode 10: {'episode': 10, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:20:04] EP 10: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:20:04] Avg reward: 1.00, Success rate: 100.00%
+[18:20:04] RL Training Summary: {'status': 'training_completed', 'avg_reward': 1.0, 'success_rate': 1.0, 'episodes': 10, 'total_reward': 10}
+[18:20:04] RL Agent: Training complete. Metrics: {'avg_reward': 1.0, 'success_rate': 1.0, 'episodes': 10}
+[18:20:04] RL Agent: Process complete.
+[18:20:04] Orchestrator: Saved JSON report to outputs\json\pune_output.json
+[18:20:04] Orchestrator: Saved geometry to outputs\geometry\pune_model.stl
+[18:20:04] Orchestrator: Run complete.
+[18:20:14] Orchestrator: Starting run for case: data/inputs/ahmedabad_residential.json
+[18:20:14] InputAgent: Loading case from data\inputs\ahmedabad_residential.json
+[18:20:14] InputAgent: Successfully loaded case with keys: ['case_id', 'city', 'location', 'plot_type', 'road_width', 'plot_size', 'expected_rule_path']
+[18:20:14] Would download: https://example.com/regulations.pdf
+[18:20:14] Parsing (stub): rules_kb/sample_rules.json
+[18:20:14] Classification Agent: Starting to select applicable rules.
+[18:20:14] Classification Agent: REJECTED rule MUM-DCPR-2034-SETBACK-FRONT
+[18:20:14] Classification Agent: REJECTED rule MUM-DCPR-2034-COVERAGE
+[18:20:14] Classification Agent: REJECTED rule MUM-DCPR-2034-FAR
+[18:20:14] Classification Agent: REJECTED rule MUM-MCGM-HEIGHT
+[18:20:14] Classification Agent: REJECTED rule MUM-MHADA-REDEVELOPMENT
+[18:20:14] Classification Agent: SELECTED rule AHM-DCR-SETBACK
+[18:20:14] Classification Agent: SELECTED rule AHM-DCR-COVERAGE
+[18:20:14] Classification Agent: SELECTED rule AHM-DCR-FAR
+[18:20:14] Classification Agent: Found 3 applicable rules.
+[18:20:14] Classification Agent: Decision details - REJECTED rule MUM-DCPR-2034-SETBACK-FRONT: Condition mismatch: city=Ahmedabad, expected Mumbai, Condition match: plot_type=residential, REJECTED rule MUM-DCPR-2034-COVERAGE: Condition mismatch: city=Ahmedabad, expected Mumbai, Condition match: plot_type=residential, REJECTED rule MUM-DCPR-2034-FAR: Condition mismatch: city=Ahmedabad, expected Mumbai, Condition match: plot_type=residential, REJECTED rule MUM-MCGM-HEIGHT: Condition mismatch: city=Ahmedabad, expected Mumbai, REJECTED rule MUM-MHADA-REDEVELOPMENT: Condition mismatch: city=Ahmedabad, expected Mumbai, Condition mismatch: project_type=None, expected slum_redevelopment, SELECTED rule AHM-DCR-SETBACK: Condition match: city=Ahmedabad, Condition match: plot_type=residential, SELECTED rule AHM-DCR-COVERAGE: Condition match: city=Ahmedabad, Condition match: plot_type=residential, SELECTED rule AHM-DCR-FAR: Condition match: city=Ahmedabad, Condition match: plot_type=residential
+[18:20:14] Calculation Agent: Starting computations.
+[18:20:14] Calculation Agent: Processing case with plot size: 600 sqm
+[18:20:14] Calculation Agent: Location is urban
+[18:20:14] Calculation Agent: Evaluating setback for rule AHM-DCR-SETBACK with road width 12
+[18:20:14] Calculation Agent: Applied setback rule: road_width >= 10 -> setback = 3.0
+[18:20:14] Calculation Agent: Coverage for urban is 0.5 (from rule AHM-DCR-COVERAGE)
+[18:20:14] Calculation Agent: FAR for urban is 2.0 (from rule AHM-DCR-FAR)
+[18:20:14] Calculation Agent: No additional FAR rule found
+[18:20:14] Calculation Agent: Max footprint: 300.0 sqm, Total floor area: 1200.0 sqm
+[18:20:14] Calculation Agent: Finished. Total floor area: 1200.0 sqm.
+[18:20:14] RL Agent: Starting RL decision process.
+[18:20:14] RL Agent: Expected rule path: ['AHM-DCR-SETBACK', 'AHM-DCR-COVERAGE', 'AHM-DCR-FAR']
+[18:20:14] RL Agent: Candidate 1 (expected): ['AHM-DCR-SETBACK', 'AHM-DCR-COVERAGE', 'AHM-DCR-FAR']
+[18:20:14] RL Agent: Candidate 2 (reversed): ['AHM-DCR-FAR', 'AHM-DCR-COVERAGE', 'AHM-DCR-SETBACK']
+[18:20:14] RL Agent: Candidate 3 (rotated): ['AHM-DCR-COVERAGE', 'AHM-DCR-FAR', 'AHM-DCR-SETBACK']
+[18:20:14] RL Agent: Initializing RL environment and training...
+[18:20:14] RL Environment: Initialized with 3 candidate paths
+[18:20:14] RL Environment: Candidate 0: ['AHM-DCR-SETBACK', 'AHM-DCR-COVERAGE', 'AHM-DCR-FAR']
+[18:20:14] RL Environment: Candidate 1: ['AHM-DCR-FAR', 'AHM-DCR-COVERAGE', 'AHM-DCR-SETBACK']
+[18:20:14] RL Environment: Candidate 2: ['AHM-DCR-COVERAGE', 'AHM-DCR-FAR', 'AHM-DCR-SETBACK']
+[18:20:14] Training RL (random policy) for 10 episodes...
+[18:20:14] RL Training Summary: {'status': 'training_started', 'episodes': 10}
+[18:20:14] RL Environment: Reset
+[18:20:14] RL Environment: Action 1 -> Chosen: ['AHM-DCR-FAR', 'AHM-DCR-COVERAGE', 'AHM-DCR-SETBACK'], Expected: ['AHM-DCR-SETBACK', 'AHM-DCR-COVERAGE', 'AHM-DCR-FAR'], Base Reward: -1, Feedback Reward: 0, Total Reward: -1
+[18:20:14] RL Training - Episode 1: {'episode': 1, 'action': 1, 'base_reward': -1, 'feedback_reward': 0, 'total_reward': -1, 'chosen_path': ['AHM-DCR-FAR', 'AHM-DCR-COVERAGE', 'AHM-DCR-SETBACK'], 'expected_path': ['AHM-DCR-SETBACK', 'AHM-DCR-COVERAGE', 'AHM-DCR-FAR'], 'running_avg_reward': -1.0, 'success_rate': 0.0}
+[18:20:14] EP 1: action=1, base_reward=-1, feedback_reward=0, total_reward=-1, chosen=['AHM-DCR-FAR', 'AHM-DCR-COVERAGE', 'AHM-DCR-SETBACK'] expected=['AHM-DCR-SETBACK', 'AHM-DCR-COVERAGE', 'AHM-DCR-FAR']
+[18:20:14] RL Environment: Reset
+[18:20:14] RL Environment: Action 2 -> Chosen: ['AHM-DCR-COVERAGE', 'AHM-DCR-FAR', 'AHM-DCR-SETBACK'], Expected: ['AHM-DCR-SETBACK', 'AHM-DCR-COVERAGE', 'AHM-DCR-FAR'], Base Reward: -1, Feedback Reward: 0, Total Reward: -1
+[18:20:14] RL Training - Episode 2: {'episode': 2, 'action': 2, 'base_reward': -1, 'feedback_reward': 0, 'total_reward': -1, 'chosen_path': ['AHM-DCR-COVERAGE', 'AHM-DCR-FAR', 'AHM-DCR-SETBACK'], 'expected_path': ['AHM-DCR-SETBACK', 'AHM-DCR-COVERAGE', 'AHM-DCR-FAR'], 'running_avg_reward': -1.0, 'success_rate': 0.0}
+[18:20:14] EP 2: action=2, base_reward=-1, feedback_reward=0, total_reward=-1, chosen=['AHM-DCR-COVERAGE', 'AHM-DCR-FAR', 'AHM-DCR-SETBACK'] expected=['AHM-DCR-SETBACK', 'AHM-DCR-COVERAGE', 'AHM-DCR-FAR']
+[18:20:14] RL Environment: Reset
+[18:20:14] RL Environment: Action 1 -> Chosen: ['AHM-DCR-FAR', 'AHM-DCR-COVERAGE', 'AHM-DCR-SETBACK'], Expected: ['AHM-DCR-SETBACK', 'AHM-DCR-COVERAGE', 'AHM-DCR-FAR'], Base Reward: -1, Feedback Reward: 0, Total Reward: -1
+[18:20:14] RL Training - Episode 3: {'episode': 3, 'action': 1, 'base_reward': -1, 'feedback_reward': 0, 'total_reward': -1, 'chosen_path': ['AHM-DCR-FAR', 'AHM-DCR-COVERAGE', 'AHM-DCR-SETBACK'], 'expected_path': ['AHM-DCR-SETBACK', 'AHM-DCR-COVERAGE', 'AHM-DCR-FAR'], 'running_avg_reward': -1.0, 'success_rate': 0.0}
+[18:20:14] EP 3: action=1, base_reward=-1, feedback_reward=0, total_reward=-1, chosen=['AHM-DCR-FAR', 'AHM-DCR-COVERAGE', 'AHM-DCR-SETBACK'] expected=['AHM-DCR-SETBACK', 'AHM-DCR-COVERAGE', 'AHM-DCR-FAR']
+[18:20:14] RL Environment: Reset
+[18:20:14] RL Environment: Action 1 -> Chosen: ['AHM-DCR-FAR', 'AHM-DCR-COVERAGE', 'AHM-DCR-SETBACK'], Expected: ['AHM-DCR-SETBACK', 'AHM-DCR-COVERAGE', 'AHM-DCR-FAR'], Base Reward: -1, Feedback Reward: 0, Total Reward: -1
+[18:20:14] RL Training - Episode 4: {'episode': 4, 'action': 1, 'base_reward': -1, 'feedback_reward': 0, 'total_reward': -1, 'chosen_path': ['AHM-DCR-FAR', 'AHM-DCR-COVERAGE', 'AHM-DCR-SETBACK'], 'expected_path': ['AHM-DCR-SETBACK', 'AHM-DCR-COVERAGE', 'AHM-DCR-FAR'], 'running_avg_reward': -1.0, 'success_rate': 0.0}
+[18:20:14] EP 4: action=1, base_reward=-1, feedback_reward=0, total_reward=-1, chosen=['AHM-DCR-FAR', 'AHM-DCR-COVERAGE', 'AHM-DCR-SETBACK'] expected=['AHM-DCR-SETBACK', 'AHM-DCR-COVERAGE', 'AHM-DCR-FAR']
+[18:20:14] RL Environment: Reset
+[18:20:14] RL Environment: Action 1 -> Chosen: ['AHM-DCR-FAR', 'AHM-DCR-COVERAGE', 'AHM-DCR-SETBACK'], Expected: ['AHM-DCR-SETBACK', 'AHM-DCR-COVERAGE', 'AHM-DCR-FAR'], Base Reward: -1, Feedback Reward: 0, Total Reward: -1
+[18:20:14] RL Training - Episode 5: {'episode': 5, 'action': 1, 'base_reward': -1, 'feedback_reward': 0, 'total_reward': -1, 'chosen_path': ['AHM-DCR-FAR', 'AHM-DCR-COVERAGE', 'AHM-DCR-SETBACK'], 'expected_path': ['AHM-DCR-SETBACK', 'AHM-DCR-COVERAGE', 'AHM-DCR-FAR'], 'running_avg_reward': -1.0, 'success_rate': 0.0}
+[18:20:14] EP 5: action=1, base_reward=-1, feedback_reward=0, total_reward=-1, chosen=['AHM-DCR-FAR', 'AHM-DCR-COVERAGE', 'AHM-DCR-SETBACK'] expected=['AHM-DCR-SETBACK', 'AHM-DCR-COVERAGE', 'AHM-DCR-FAR']
+[18:20:14] RL Environment: Reset
+[18:20:14] RL Environment: Action 2 -> Chosen: ['AHM-DCR-COVERAGE', 'AHM-DCR-FAR', 'AHM-DCR-SETBACK'], Expected: ['AHM-DCR-SETBACK', 'AHM-DCR-COVERAGE', 'AHM-DCR-FAR'], Base Reward: -1, Feedback Reward: 0, Total Reward: -1
+[18:20:14] RL Training - Episode 6: {'episode': 6, 'action': 2, 'base_reward': -1, 'feedback_reward': 0, 'total_reward': -1, 'chosen_path': ['AHM-DCR-COVERAGE', 'AHM-DCR-FAR', 'AHM-DCR-SETBACK'], 'expected_path': ['AHM-DCR-SETBACK', 'AHM-DCR-COVERAGE', 'AHM-DCR-FAR'], 'running_avg_reward': -1.0, 'success_rate': 0.0}
+[18:20:14] EP 6: action=2, base_reward=-1, feedback_reward=0, total_reward=-1, chosen=['AHM-DCR-COVERAGE', 'AHM-DCR-FAR', 'AHM-DCR-SETBACK'] expected=['AHM-DCR-SETBACK', 'AHM-DCR-COVERAGE', 'AHM-DCR-FAR']
+[18:20:14] RL Environment: Reset
+[18:20:14] RL Environment: Action 1 -> Chosen: ['AHM-DCR-FAR', 'AHM-DCR-COVERAGE', 'AHM-DCR-SETBACK'], Expected: ['AHM-DCR-SETBACK', 'AHM-DCR-COVERAGE', 'AHM-DCR-FAR'], Base Reward: -1, Feedback Reward: 0, Total Reward: -1
+[18:20:14] RL Training - Episode 7: {'episode': 7, 'action': 1, 'base_reward': -1, 'feedback_reward': 0, 'total_reward': -1, 'chosen_path': ['AHM-DCR-FAR', 'AHM-DCR-COVERAGE', 'AHM-DCR-SETBACK'], 'expected_path': ['AHM-DCR-SETBACK', 'AHM-DCR-COVERAGE', 'AHM-DCR-FAR'], 'running_avg_reward': -1.0, 'success_rate': 0.0}
+[18:20:14] EP 7: action=1, base_reward=-1, feedback_reward=0, total_reward=-1, chosen=['AHM-DCR-FAR', 'AHM-DCR-COVERAGE', 'AHM-DCR-SETBACK'] expected=['AHM-DCR-SETBACK', 'AHM-DCR-COVERAGE', 'AHM-DCR-FAR']
+[18:20:14] RL Environment: Reset
+[18:20:14] RL Environment: Action 2 -> Chosen: ['AHM-DCR-COVERAGE', 'AHM-DCR-FAR', 'AHM-DCR-SETBACK'], Expected: ['AHM-DCR-SETBACK', 'AHM-DCR-COVERAGE', 'AHM-DCR-FAR'], Base Reward: -1, Feedback Reward: 0, Total Reward: -1
+[18:20:14] RL Training - Episode 8: {'episode': 8, 'action': 2, 'base_reward': -1, 'feedback_reward': 0, 'total_reward': -1, 'chosen_path': ['AHM-DCR-COVERAGE', 'AHM-DCR-FAR', 'AHM-DCR-SETBACK'], 'expected_path': ['AHM-DCR-SETBACK', 'AHM-DCR-COVERAGE', 'AHM-DCR-FAR'], 'running_avg_reward': -1.0, 'success_rate': 0.0}
+[18:20:14] EP 8: action=2, base_reward=-1, feedback_reward=0, total_reward=-1, chosen=['AHM-DCR-COVERAGE', 'AHM-DCR-FAR', 'AHM-DCR-SETBACK'] expected=['AHM-DCR-SETBACK', 'AHM-DCR-COVERAGE', 'AHM-DCR-FAR']
+[18:20:14] RL Environment: Reset
+[18:20:14] RL Environment: Action 2 -> Chosen: ['AHM-DCR-COVERAGE', 'AHM-DCR-FAR', 'AHM-DCR-SETBACK'], Expected: ['AHM-DCR-SETBACK', 'AHM-DCR-COVERAGE', 'AHM-DCR-FAR'], Base Reward: -1, Feedback Reward: 0, Total Reward: -1
+[18:20:14] RL Training - Episode 9: {'episode': 9, 'action': 2, 'base_reward': -1, 'feedback_reward': 0, 'total_reward': -1, 'chosen_path': ['AHM-DCR-COVERAGE', 'AHM-DCR-FAR', 'AHM-DCR-SETBACK'], 'expected_path': ['AHM-DCR-SETBACK', 'AHM-DCR-COVERAGE', 'AHM-DCR-FAR'], 'running_avg_reward': -1.0, 'success_rate': 0.0}
+[18:20:14] EP 9: action=2, base_reward=-1, feedback_reward=0, total_reward=-1, chosen=['AHM-DCR-COVERAGE', 'AHM-DCR-FAR', 'AHM-DCR-SETBACK'] expected=['AHM-DCR-SETBACK', 'AHM-DCR-COVERAGE', 'AHM-DCR-FAR']
+[18:20:14] RL Environment: Reset
+[18:20:14] RL Environment: Action 2 -> Chosen: ['AHM-DCR-COVERAGE', 'AHM-DCR-FAR', 'AHM-DCR-SETBACK'], Expected: ['AHM-DCR-SETBACK', 'AHM-DCR-COVERAGE', 'AHM-DCR-FAR'], Base Reward: -1, Feedback Reward: 0, Total Reward: -1
+[18:20:14] RL Training - Episode 10: {'episode': 10, 'action': 2, 'base_reward': -1, 'feedback_reward': 0, 'total_reward': -1, 'chosen_path': ['AHM-DCR-COVERAGE', 'AHM-DCR-FAR', 'AHM-DCR-SETBACK'], 'expected_path': ['AHM-DCR-SETBACK', 'AHM-DCR-COVERAGE', 'AHM-DCR-FAR'], 'running_avg_reward': -1.0, 'success_rate': 0.0}
+[18:20:14] EP 10: action=2, base_reward=-1, feedback_reward=0, total_reward=-1, chosen=['AHM-DCR-COVERAGE', 'AHM-DCR-FAR', 'AHM-DCR-SETBACK'] expected=['AHM-DCR-SETBACK', 'AHM-DCR-COVERAGE', 'AHM-DCR-FAR']
+[18:20:14] Avg reward: -1.00, Success rate: 0.00%
+[18:20:14] RL Training Summary: {'status': 'training_completed', 'avg_reward': -1.0, 'success_rate': 0.0, 'episodes': 10, 'total_reward': -10}
+[18:20:14] RL Agent: Training complete. Metrics: {'avg_reward': -1.0, 'success_rate': 0.0, 'episodes': 10}
+[18:20:14] RL Agent: Process complete.
+[18:20:14] Orchestrator: Saved JSON report to outputs\json\ahmedabad_residential.json
+[18:20:14] Orchestrator: Saved geometry to outputs\geometry\ahmedabad_residential.json
+[18:20:14] Orchestrator: Run complete.
+[18:21:31] Feedback received for case mumbai_redevelopment: up
+[18:22:08] Feedback received for case test-case-001: up
+[18:22:23] Orchestrator: Starting run for case: data/inputs/mumbai_case.json
+[18:22:23] InputAgent: Loading case from data\inputs\mumbai_case.json
+[18:22:23] InputAgent: Successfully loaded case with keys: ['case_id', 'location', 'road_width', 'plot_size']
+[18:22:23] Would download: https://example.com/regulations.pdf
+[18:22:23] Parsing (stub): rules_kb/sample_rules.json
+[18:22:23] Classification Agent: Starting to select applicable rules.
+[18:22:23] Classification Agent: REJECTED rule MUM-DCPR-2034-SETBACK-FRONT
+[18:22:23] Classification Agent: REJECTED rule MUM-DCPR-2034-COVERAGE
+[18:22:23] Classification Agent: REJECTED rule MUM-DCPR-2034-FAR
+[18:22:23] Classification Agent: REJECTED rule MUM-MCGM-HEIGHT
+[18:22:23] Classification Agent: REJECTED rule MUM-MHADA-REDEVELOPMENT
+[18:22:23] Classification Agent: REJECTED rule AHM-DCR-SETBACK
+[18:22:23] Classification Agent: REJECTED rule AHM-DCR-COVERAGE
+[18:22:23] Classification Agent: REJECTED rule AHM-DCR-FAR
+[18:22:23] Classification Agent: Found 0 applicable rules.
+[18:22:23] Classification Agent: Decision details - REJECTED rule MUM-DCPR-2034-SETBACK-FRONT: Condition mismatch: city=None, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-DCPR-2034-COVERAGE: Condition mismatch: city=None, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-DCPR-2034-FAR: Condition mismatch: city=None, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-MCGM-HEIGHT: Condition mismatch: city=None, expected Mumbai, REJECTED rule MUM-MHADA-REDEVELOPMENT: Condition mismatch: city=None, expected Mumbai, Condition mismatch: project_type=None, expected slum_redevelopment, REJECTED rule AHM-DCR-SETBACK: Condition mismatch: city=None, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential, REJECTED rule AHM-DCR-COVERAGE: Condition mismatch: city=None, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential, REJECTED rule AHM-DCR-FAR: Condition mismatch: city=None, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential
+[18:22:23] Calculation Agent: Starting computations.
+[18:22:23] Calculation Agent: Processing case with plot size: 500 sqm
+[18:22:23] Calculation Agent: Location is urban
+[18:22:23] Calculation Agent: No specific setback rule found, using default: 1.5
+[18:22:23] Calculation Agent: No specific coverage rule found, using default: 0.55
+[18:22:23] Calculation Agent: No specific FAR rule found, using default: 1.5
+[18:22:23] Calculation Agent: No additional FAR rule found
+[18:22:23] Calculation Agent: Max footprint: 275.0 sqm, Total floor area: 750.0 sqm
+[18:22:23] Calculation Agent: Finished. Total floor area: 750.0 sqm.
+[18:22:23] RL Agent: Starting RL decision process.
+[18:22:23] RL Agent: Expected rule path: []
+[18:22:23] RL Agent: Candidate 1 (expected): []
+[18:22:23] RL Agent: Candidate 2 (reversed): []
+[18:22:23] RL Agent: Initializing RL environment and training...
+[18:22:23] RL Environment: Initialized with 2 candidate paths
+[18:22:23] RL Environment: Candidate 0: []
+[18:22:23] RL Environment: Candidate 1: []
+[18:22:23] Training RL (random policy) for 10 episodes...
+[18:22:23] RL Training Summary: {'status': 'training_started', 'episodes': 10}
+[18:22:23] RL Environment: Reset
+[18:22:23] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:22:23] RL Training - Episode 1: {'episode': 1, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:22:23] EP 1: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:22:23] RL Environment: Reset
+[18:22:23] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:22:23] RL Training - Episode 2: {'episode': 2, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:22:23] EP 2: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:22:23] RL Environment: Reset
+[18:22:23] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:22:23] RL Training - Episode 3: {'episode': 3, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:22:23] EP 3: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:22:23] RL Environment: Reset
+[18:22:23] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:22:23] RL Training - Episode 4: {'episode': 4, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:22:23] EP 4: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:22:23] RL Environment: Reset
+[18:22:23] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:22:23] RL Training - Episode 5: {'episode': 5, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:22:23] EP 5: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:22:23] RL Environment: Reset
+[18:22:23] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:22:23] RL Training - Episode 6: {'episode': 6, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:22:23] EP 6: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:22:23] RL Environment: Reset
+[18:22:23] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:22:23] RL Training - Episode 7: {'episode': 7, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:22:23] EP 7: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:22:23] RL Environment: Reset
+[18:22:23] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:22:23] RL Training - Episode 8: {'episode': 8, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:22:23] EP 8: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:22:23] RL Environment: Reset
+[18:22:23] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:22:23] RL Training - Episode 9: {'episode': 9, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:22:23] EP 9: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:22:23] RL Environment: Reset
+[18:22:23] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:22:23] RL Training - Episode 10: {'episode': 10, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:22:23] EP 10: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:22:23] Avg reward: 1.00, Success rate: 100.00%
+[18:22:23] RL Training Summary: {'status': 'training_completed', 'avg_reward': 1.0, 'success_rate': 1.0, 'episodes': 10, 'total_reward': 10}
+[18:22:23] RL Agent: Training complete. Metrics: {'avg_reward': 1.0, 'success_rate': 1.0, 'episodes': 10}
+[18:22:23] RL Agent: Process complete.
+[18:22:23] Orchestrator: Saved JSON report to outputs\json\mumbai_output.json
+[18:22:23] Orchestrator: Saved geometry to outputs\geometry\mumbai_model.stl
+[18:22:23] Orchestrator: Run complete.
+[18:22:23] Orchestrator: Starting run for case: data/inputs/pune_case.json
+[18:22:23] InputAgent: Loading case from data\inputs\pune_case.json
+[18:22:23] InputAgent: Successfully loaded case with keys: ['city', 'type', 'plot_size']
+[18:22:23] Would download: https://example.com/regulations.pdf
+[18:22:23] Parsing (stub): rules_kb/sample_rules.json
+[18:22:23] Classification Agent: Starting to select applicable rules.
+[18:22:23] Classification Agent: REJECTED rule MUM-DCPR-2034-SETBACK-FRONT
+[18:22:23] Classification Agent: REJECTED rule MUM-DCPR-2034-COVERAGE
+[18:22:23] Classification Agent: REJECTED rule MUM-DCPR-2034-FAR
+[18:22:23] Classification Agent: REJECTED rule MUM-MCGM-HEIGHT
+[18:22:23] Classification Agent: REJECTED rule MUM-MHADA-REDEVELOPMENT
+[18:22:23] Classification Agent: REJECTED rule AHM-DCR-SETBACK
+[18:22:23] Classification Agent: REJECTED rule AHM-DCR-COVERAGE
+[18:22:23] Classification Agent: REJECTED rule AHM-DCR-FAR
+[18:22:23] Classification Agent: Found 0 applicable rules.
+[18:22:23] Classification Agent: Decision details - REJECTED rule MUM-DCPR-2034-SETBACK-FRONT: Condition mismatch: city=Pune, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-DCPR-2034-COVERAGE: Condition mismatch: city=Pune, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-DCPR-2034-FAR: Condition mismatch: city=Pune, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-MCGM-HEIGHT: Condition mismatch: city=Pune, expected Mumbai, REJECTED rule MUM-MHADA-REDEVELOPMENT: Condition mismatch: city=Pune, expected Mumbai, Condition mismatch: project_type=None, expected slum_redevelopment, REJECTED rule AHM-DCR-SETBACK: Condition mismatch: city=Pune, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential, REJECTED rule AHM-DCR-COVERAGE: Condition mismatch: city=Pune, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential, REJECTED rule AHM-DCR-FAR: Condition mismatch: city=Pune, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential
+[18:22:23] Calculation Agent: Starting computations.
+[18:22:23] Calculation Agent: Processing case with plot size: 400 sqm
+[18:22:23] Calculation Agent: Location is default
+[18:22:23] Calculation Agent: No specific setback rule found, using default: 1.5
+[18:22:23] Calculation Agent: No specific coverage rule found, using default: 0.55
+[18:22:23] Calculation Agent: No specific FAR rule found, using default: 1.5
+[18:22:23] Calculation Agent: No additional FAR rule found
+[18:22:23] Calculation Agent: Max footprint: 220.00000000000003 sqm, Total floor area: 600.0 sqm
+[18:22:23] Calculation Agent: Finished. Total floor area: 600.0 sqm.
+[18:22:23] RL Agent: Starting RL decision process.
+[18:22:23] RL Agent: Expected rule path: []
+[18:22:23] RL Agent: Candidate 1 (expected): []
+[18:22:23] RL Agent: Candidate 2 (reversed): []
+[18:22:23] RL Agent: Initializing RL environment and training...
+[18:22:23] RL Environment: Initialized with 2 candidate paths
+[18:22:23] RL Environment: Candidate 0: []
+[18:22:23] RL Environment: Candidate 1: []
+[18:22:23] Training RL (random policy) for 10 episodes...
+[18:22:23] RL Training Summary: {'status': 'training_started', 'episodes': 10}
+[18:22:23] RL Environment: Reset
+[18:22:23] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:22:23] RL Training - Episode 1: {'episode': 1, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:22:23] EP 1: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:22:23] RL Environment: Reset
+[18:22:23] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:22:23] RL Training - Episode 2: {'episode': 2, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:22:23] EP 2: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:22:23] RL Environment: Reset
+[18:22:23] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:22:23] RL Training - Episode 3: {'episode': 3, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:22:23] EP 3: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:22:23] RL Environment: Reset
+[18:22:23] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:22:23] RL Training - Episode 4: {'episode': 4, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:22:23] EP 4: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:22:23] RL Environment: Reset
+[18:22:23] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:22:23] RL Training - Episode 5: {'episode': 5, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:22:23] EP 5: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:22:23] RL Environment: Reset
+[18:22:23] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:22:23] RL Training - Episode 6: {'episode': 6, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:22:23] EP 6: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:22:23] RL Environment: Reset
+[18:22:23] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:22:23] RL Training - Episode 7: {'episode': 7, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:22:23] EP 7: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:22:23] RL Environment: Reset
+[18:22:23] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:22:23] RL Training - Episode 8: {'episode': 8, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:22:23] EP 8: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:22:23] RL Environment: Reset
+[18:22:23] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:22:23] RL Training - Episode 9: {'episode': 9, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:22:23] EP 9: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:22:23] RL Environment: Reset
+[18:22:23] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:22:23] RL Training - Episode 10: {'episode': 10, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:22:23] EP 10: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:22:23] Avg reward: 1.00, Success rate: 100.00%
+[18:22:23] RL Training Summary: {'status': 'training_completed', 'avg_reward': 1.0, 'success_rate': 1.0, 'episodes': 10, 'total_reward': 10}
+[18:22:23] RL Agent: Training complete. Metrics: {'avg_reward': 1.0, 'success_rate': 1.0, 'episodes': 10}
+[18:22:23] RL Agent: Process complete.
+[18:22:23] Orchestrator: Saved JSON report to outputs\json\pune_output.json
+[18:22:23] Orchestrator: Saved geometry to outputs\geometry\pune_model.stl
+[18:22:23] Orchestrator: Run complete.
+[18:32:31] Orchestrator: Starting run for case: data/inputs/mumbai_case.json
+[18:32:31] InputAgent: Loading case from data\inputs\mumbai_case.json
+[18:32:31] InputAgent: Successfully loaded case with keys: ['case_id', 'location', 'road_width', 'plot_size']
+[18:32:31] Would download: https://example.com/regulations.pdf
+[18:32:31] Parsing (stub): rules_kb/sample_rules.json
+[18:32:31] Classification Agent: Starting to select applicable rules.
+[18:32:31] Classification Agent: REJECTED rule MUM-DCPR-2034-SETBACK-FRONT
+[18:32:31] Classification Agent: REJECTED rule MUM-DCPR-2034-COVERAGE
+[18:32:31] Classification Agent: REJECTED rule MUM-DCPR-2034-FAR
+[18:32:31] Classification Agent: REJECTED rule MUM-MCGM-HEIGHT
+[18:32:31] Classification Agent: REJECTED rule MUM-MHADA-REDEVELOPMENT
+[18:32:31] Classification Agent: REJECTED rule AHM-DCR-SETBACK
+[18:32:31] Classification Agent: REJECTED rule AHM-DCR-COVERAGE
+[18:32:31] Classification Agent: REJECTED rule AHM-DCR-FAR
+[18:32:31] Classification Agent: Found 0 applicable rules.
+[18:32:31] Classification Agent: Decision details - REJECTED rule MUM-DCPR-2034-SETBACK-FRONT: Condition mismatch: city=None, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-DCPR-2034-COVERAGE: Condition mismatch: city=None, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-DCPR-2034-FAR: Condition mismatch: city=None, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-MCGM-HEIGHT: Condition mismatch: city=None, expected Mumbai, REJECTED rule MUM-MHADA-REDEVELOPMENT: Condition mismatch: city=None, expected Mumbai, Condition mismatch: project_type=None, expected slum_redevelopment, REJECTED rule AHM-DCR-SETBACK: Condition mismatch: city=None, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential, REJECTED rule AHM-DCR-COVERAGE: Condition mismatch: city=None, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential, REJECTED rule AHM-DCR-FAR: Condition mismatch: city=None, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential
+[18:32:31] Calculation Agent: Starting computations.
+[18:32:31] Calculation Agent: Processing case with plot size: 500 sqm
+[18:32:31] Calculation Agent: Location is urban
+[18:32:31] Calculation Agent: No specific setback rule found, using default: 1.5
+[18:32:31] Calculation Agent: No specific coverage rule found, using default: 0.55
+[18:32:31] Calculation Agent: No specific FAR rule found, using default: 1.5
+[18:32:31] Calculation Agent: No additional FAR rule found
+[18:32:31] Calculation Agent: Max footprint: 275.0 sqm, Total floor area: 750.0 sqm
+[18:32:31] Calculation Agent: Finished. Total floor area: 750.0 sqm.
+[18:32:31] RL Agent: Starting RL decision process.
+[18:32:31] RL Agent: Expected rule path: []
+[18:32:31] RL Agent: Candidate 1 (expected): []
+[18:32:31] RL Agent: Candidate 2 (reversed): []
+[18:32:31] RL Agent: Initializing RL environment and training...
+[18:32:31] RL Environment: Initialized with 2 candidate paths
+[18:32:31] RL Environment: Candidate 0: []
+[18:32:31] RL Environment: Candidate 1: []
+[18:32:31] Training RL (random policy) for 10 episodes...
+[18:32:31] RL Training Summary: {'status': 'training_started', 'episodes': 10}
+[18:32:31] RL Environment: Reset
+[18:32:31] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:32:31] RL Training - Episode 1: {'episode': 1, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:32:31] EP 1: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:32:31] RL Environment: Reset
+[18:32:31] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:32:31] RL Training - Episode 2: {'episode': 2, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:32:31] EP 2: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:32:31] RL Environment: Reset
+[18:32:31] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:32:31] RL Training - Episode 3: {'episode': 3, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:32:31] EP 3: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:32:31] RL Environment: Reset
+[18:32:31] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:32:31] RL Training - Episode 4: {'episode': 4, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:32:31] EP 4: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:32:31] RL Environment: Reset
+[18:32:31] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:32:31] RL Training - Episode 5: {'episode': 5, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:32:31] EP 5: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:32:31] RL Environment: Reset
+[18:32:31] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:32:31] RL Training - Episode 6: {'episode': 6, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:32:31] EP 6: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:32:31] RL Environment: Reset
+[18:32:31] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:32:31] RL Training - Episode 7: {'episode': 7, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:32:31] EP 7: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:32:31] RL Environment: Reset
+[18:32:31] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:32:31] RL Training - Episode 8: {'episode': 8, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:32:31] EP 8: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:32:31] RL Environment: Reset
+[18:32:31] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:32:31] RL Training - Episode 9: {'episode': 9, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:32:31] EP 9: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:32:31] RL Environment: Reset
+[18:32:31] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:32:31] RL Training - Episode 10: {'episode': 10, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:32:31] EP 10: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:32:31] Avg reward: 1.00, Success rate: 100.00%
+[18:32:31] RL Training Summary: {'status': 'training_completed', 'avg_reward': 1.0, 'success_rate': 1.0, 'episodes': 10, 'total_reward': 10}
+[18:32:31] RL Agent: Training complete. Metrics: {'avg_reward': 1.0, 'success_rate': 1.0, 'episodes': 10}
+[18:32:31] RL Agent: Process complete.
+[18:32:31] Orchestrator: Saved JSON report to outputs\json\mumbai_output.json
+[18:32:31] Orchestrator: Saved geometry to outputs\geometry\mumbai_model.stl
+[18:32:31] Orchestrator: Run complete.
+[18:50:42] Orchestrator: Starting run for case: data/inputs/mumbai_case.json
+[18:50:42] InputAgent: Loading case from data\inputs\mumbai_case.json
+[18:50:42] InputAgent: Successfully loaded case with keys: ['case_id', 'location', 'road_width', 'plot_size']
+[18:50:42] Would download: https://example.com/regulations.pdf
+[18:50:42] Parsing (stub): rules_kb/sample_rules.json
+[18:50:42] Classification Agent: Starting to select applicable rules.
+[18:50:42] Classification Agent: REJECTED rule MUM-DCPR-2034-SETBACK-FRONT
+[18:50:42] Classification Agent: REJECTED rule MUM-DCPR-2034-COVERAGE
+[18:50:42] Classification Agent: REJECTED rule MUM-DCPR-2034-FAR
+[18:50:42] Classification Agent: REJECTED rule MUM-MCGM-HEIGHT
+[18:50:42] Classification Agent: REJECTED rule MUM-MHADA-REDEVELOPMENT
+[18:50:42] Classification Agent: REJECTED rule AHM-DCR-SETBACK
+[18:50:42] Classification Agent: REJECTED rule AHM-DCR-COVERAGE
+[18:50:42] Classification Agent: REJECTED rule AHM-DCR-FAR
+[18:50:42] Classification Agent: Found 0 applicable rules.
+[18:50:42] Classification Agent: Decision details - REJECTED rule MUM-DCPR-2034-SETBACK-FRONT: Condition mismatch: city=None, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-DCPR-2034-COVERAGE: Condition mismatch: city=None, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-DCPR-2034-FAR: Condition mismatch: city=None, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-MCGM-HEIGHT: Condition mismatch: city=None, expected Mumbai, REJECTED rule MUM-MHADA-REDEVELOPMENT: Condition mismatch: city=None, expected Mumbai, Condition mismatch: project_type=None, expected slum_redevelopment, REJECTED rule AHM-DCR-SETBACK: Condition mismatch: city=None, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential, REJECTED rule AHM-DCR-COVERAGE: Condition mismatch: city=None, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential, REJECTED rule AHM-DCR-FAR: Condition mismatch: city=None, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential
+[18:50:42] Calculation Agent: Starting computations.
+[18:50:42] Calculation Agent: Processing case with plot size: 500 sqm
+[18:50:42] Calculation Agent: Location is urban
+[18:50:42] Calculation Agent: No specific setback rule found, using default: 1.5
+[18:50:42] Calculation Agent: No specific coverage rule found, using default: 0.55
+[18:50:42] Calculation Agent: No specific FAR rule found, using default: 1.5
+[18:50:42] Calculation Agent: No additional FAR rule found
+[18:50:42] Calculation Agent: Max footprint: 275.0 sqm, Total floor area: 750.0 sqm
+[18:50:42] Calculation Agent: Finished. Total floor area: 750.0 sqm.
+[18:50:42] RL Agent: Starting RL decision process.
+[18:50:42] RL Agent: Expected rule path: []
+[18:50:42] RL Agent: Candidate 1 (expected): []
+[18:50:42] RL Agent: Candidate 2 (reversed): []
+[18:50:42] RL Agent: Initializing RL environment and training...
+[18:50:42] RL Environment: Initialized with 2 candidate paths
+[18:50:42] RL Environment: Candidate 0: []
+[18:50:42] RL Environment: Candidate 1: []
+[18:50:42] Training RL (random policy) for 10 episodes...
+[18:50:42] RL Training Summary: {'status': 'training_started', 'episodes': 10}
+[18:50:42] RL Environment: Reset
+[18:50:42] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:50:42] RL Training - Episode 1: {'episode': 1, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:50:42] EP 1: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:50:42] RL Environment: Reset
+[18:50:42] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:50:42] RL Training - Episode 2: {'episode': 2, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:50:42] EP 2: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:50:42] RL Environment: Reset
+[18:50:42] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:50:42] RL Training - Episode 3: {'episode': 3, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:50:42] EP 3: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:50:42] RL Environment: Reset
+[18:50:42] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:50:42] RL Training - Episode 4: {'episode': 4, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:50:42] EP 4: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:50:42] RL Environment: Reset
+[18:50:42] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:50:42] RL Training - Episode 5: {'episode': 5, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:50:42] EP 5: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:50:42] RL Environment: Reset
+[18:50:42] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:50:42] RL Training - Episode 6: {'episode': 6, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:50:42] EP 6: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:50:42] RL Environment: Reset
+[18:50:42] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:50:42] RL Training - Episode 7: {'episode': 7, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:50:42] EP 7: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:50:42] RL Environment: Reset
+[18:50:42] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:50:42] RL Training - Episode 8: {'episode': 8, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:50:42] EP 8: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:50:42] RL Environment: Reset
+[18:50:42] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:50:42] RL Training - Episode 9: {'episode': 9, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:50:42] EP 9: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:50:42] RL Environment: Reset
+[18:50:42] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[18:50:42] RL Training - Episode 10: {'episode': 10, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[18:50:42] EP 10: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[18:50:42] Avg reward: 1.00, Success rate: 100.00%
+[18:50:42] RL Training Summary: {'status': 'training_completed', 'avg_reward': 1.0, 'success_rate': 1.0, 'episodes': 10, 'total_reward': 10}
+[18:50:42] RL Agent: Training complete. Metrics: {'avg_reward': 1.0, 'success_rate': 1.0, 'episodes': 10}
+[18:50:42] RL Agent: Process complete.
+[18:50:42] Orchestrator: Saved JSON report to outputs\json\mumbai_output.json
+[18:50:42] Orchestrator: Saved geometry to outputs\geometry\mumbai_model.stl
+[18:50:42] Orchestrator: Run complete.
+[19:01:41] Feedback received for case mumbai_redevelopment: up
+[19:07:40] Orchestrator: Starting run for case: data/inputs/mumbai_case.json
+[19:07:40] InputAgent: Loading case from data\inputs\mumbai_case.json
+[19:07:40] InputAgent: Successfully loaded case with keys: ['case_id', 'location', 'road_width', 'plot_size']
+[19:07:40] Would download: https://example.com/regulations.pdf
+[19:07:40] Parsing (stub): rules_kb/sample_rules.json
+[19:07:40] Classification Agent: Starting to select applicable rules.
+[19:07:40] Classification Agent: REJECTED rule MUM-DCPR-2034-SETBACK-FRONT
+[19:07:40] Classification Agent: REJECTED rule MUM-DCPR-2034-COVERAGE
+[19:07:40] Classification Agent: REJECTED rule MUM-DCPR-2034-FAR
+[19:07:40] Classification Agent: REJECTED rule MUM-MCGM-HEIGHT
+[19:07:40] Classification Agent: REJECTED rule MUM-MHADA-REDEVELOPMENT
+[19:07:40] Classification Agent: REJECTED rule AHM-DCR-SETBACK
+[19:07:40] Classification Agent: REJECTED rule AHM-DCR-COVERAGE
+[19:07:40] Classification Agent: REJECTED rule AHM-DCR-FAR
+[19:07:40] Classification Agent: Found 0 applicable rules.
+[19:07:40] Classification Agent: Decision details - REJECTED rule MUM-DCPR-2034-SETBACK-FRONT: Condition mismatch: city=None, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-DCPR-2034-COVERAGE: Condition mismatch: city=None, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-DCPR-2034-FAR: Condition mismatch: city=None, expected Mumbai, Condition mismatch: plot_type=None, expected residential, REJECTED rule MUM-MCGM-HEIGHT: Condition mismatch: city=None, expected Mumbai, REJECTED rule MUM-MHADA-REDEVELOPMENT: Condition mismatch: city=None, expected Mumbai, Condition mismatch: project_type=None, expected slum_redevelopment, REJECTED rule AHM-DCR-SETBACK: Condition mismatch: city=None, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential, REJECTED rule AHM-DCR-COVERAGE: Condition mismatch: city=None, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential, REJECTED rule AHM-DCR-FAR: Condition mismatch: city=None, expected Ahmedabad, Condition mismatch: plot_type=None, expected residential
+[19:07:40] Calculation Agent: Starting computations.
+[19:07:40] Calculation Agent: Processing case with plot size: 500 sqm
+[19:07:40] Calculation Agent: Location is urban
+[19:07:40] Calculation Agent: No specific setback rule found, using default: 1.5
+[19:07:40] Calculation Agent: No specific coverage rule found, using default: 0.55
+[19:07:40] Calculation Agent: No specific FAR rule found, using default: 1.5
+[19:07:40] Calculation Agent: No additional FAR rule found
+[19:07:40] Calculation Agent: Max footprint: 275.0 sqm, Total floor area: 750.0 sqm
+[19:07:40] Calculation Agent: Finished. Total floor area: 750.0 sqm.
+[19:07:40] RL Agent: Starting RL decision process.
+[19:07:40] RL Agent: Expected rule path: []
+[19:07:40] RL Agent: Candidate 1 (expected): []
+[19:07:40] RL Agent: Candidate 2 (reversed): []
+[19:07:40] RL Agent: Initializing RL environment and training...
+[19:07:40] RL Environment: Initialized with 2 candidate paths
+[19:07:40] RL Environment: Candidate 0: []
+[19:07:40] RL Environment: Candidate 1: []
+[19:07:40] Training RL (random policy) for 10 episodes...
+[19:07:40] RL Training Summary: {'status': 'training_started', 'episodes': 10}
+[19:07:40] RL Environment: Reset
+[19:07:40] RL Environment: Feedback reward for case mumbai-001: 0
+[19:07:40] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[19:07:40] RL Training - Episode 1: {'episode': 1, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[19:07:40] EP 1: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[19:07:40] RL Environment: Reset
+[19:07:40] RL Environment: Feedback reward for case mumbai-001: 0
+[19:07:40] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[19:07:40] RL Training - Episode 2: {'episode': 2, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[19:07:40] EP 2: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[19:07:40] RL Environment: Reset
+[19:07:40] RL Environment: Feedback reward for case mumbai-001: 0
+[19:07:40] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[19:07:40] RL Training - Episode 3: {'episode': 3, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[19:07:40] EP 3: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[19:07:40] RL Environment: Reset
+[19:07:40] RL Environment: Feedback reward for case mumbai-001: 0
+[19:07:40] RL Environment: Action 1 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[19:07:40] RL Training - Episode 4: {'episode': 4, 'action': 1, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[19:07:40] EP 4: action=1, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[19:07:40] RL Environment: Reset
+[19:07:40] RL Environment: Feedback reward for case mumbai-001: 0
+[19:07:40] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[19:07:40] RL Training - Episode 5: {'episode': 5, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[19:07:40] EP 5: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[19:07:40] RL Environment: Reset
+[19:07:40] RL Environment: Feedback reward for case mumbai-001: 0
+[19:07:40] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[19:07:40] RL Training - Episode 6: {'episode': 6, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[19:07:40] EP 6: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[19:07:40] RL Environment: Reset
+[19:07:40] RL Environment: Feedback reward for case mumbai-001: 0
+[19:07:40] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[19:07:40] RL Training - Episode 7: {'episode': 7, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[19:07:40] EP 7: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[19:07:40] RL Environment: Reset
+[19:07:40] RL Environment: Feedback reward for case mumbai-001: 0
+[19:07:40] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[19:07:40] RL Training - Episode 8: {'episode': 8, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[19:07:40] EP 8: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[19:07:40] RL Environment: Reset
+[19:07:40] RL Environment: Feedback reward for case mumbai-001: 0
+[19:07:40] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[19:07:40] RL Training - Episode 9: {'episode': 9, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[19:07:40] EP 9: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[19:07:40] RL Environment: Reset
+[19:07:40] RL Environment: Feedback reward for case mumbai-001: 0
+[19:07:40] RL Environment: Action 0 -> Chosen: [], Expected: [], Base Reward: 1, Feedback Reward: 0, Total Reward: 1
+[19:07:40] RL Training - Episode 10: {'episode': 10, 'action': 0, 'base_reward': 1, 'feedback_reward': 0, 'total_reward': 1, 'chosen_path': [], 'expected_path': [], 'running_avg_reward': 1.0, 'success_rate': 1.0}
+[19:07:40] EP 10: action=0, base_reward=1, feedback_reward=0, total_reward=1, chosen=[] expected=[]
+[19:07:40] Avg reward: 1.00, Success rate: 100.00%
+[19:07:40] RL Training Summary: {'status': 'training_completed', 'avg_reward': 1.0, 'success_rate': 1.0, 'episodes': 10, 'total_reward': 10}
+[19:07:40] RL Agent: Training complete. Metrics: {'avg_reward': 1.0, 'success_rate': 1.0, 'episodes': 10}
+[19:07:40] RL Agent: Process complete.
+[19:07:40] Orchestrator: Saved JSON report to outputs\json\mumbai_output.json
+[19:07:40] Orchestrator: Saved geometry to outputs\geometry\mumbai_model.stl
+[19:07:40] Orchestrator: Run complete.
