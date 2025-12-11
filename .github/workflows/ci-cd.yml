@@ -1,0 +1,94 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - master
+      - 'fix/**'
+  pull_request:
+    branches:
+      - main
+      - master
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.10', '3.11', '3.12']
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: 'pip'
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ matrix.python-version }}-${{ hashFiles('**/requirements.txt', '**/poetry.lock', '**/pyproject.toml') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-${{ matrix.python-version }}-
+
+      - name: Create virtual environment
+        run: python -m venv .venv
+
+      - name: Activate venv
+        shell: bash
+        run: |
+          source .venv/bin/activate
+          python -V
+
+      - name: Install dependencies (requirements.txt or poetry)
+        shell: bash
+        run: |
+          source .venv/bin/activate
+          if [ -f requirements.txt ]; then
+            pip install --upgrade pip
+            pip install -r requirements.txt
+          elif [ -f poetry.lock ] || [ -f pyproject.toml ]; then
+            python -m pip install --upgrade pip
+            pip install poetry
+            poetry config virtualenvs.create false --local
+            poetry install --no-interaction --no-ansi
+          else
+            echo "No requirements.txt or pyproject.toml found — attempting 'pip install -e .'"
+            pip install --upgrade pip
+            pip install -e .
+          fi
+
+      - name: Run tests with pytest
+        shell: bash
+        run: |
+          source .venv/bin/activate
+          # run tests; adjust pytest args if needed
+          pytest --maxfail=1 --disable-warnings -q --junitxml=results.xml --cov=./ --cov-report=xml:coverage.xml
+
+      - name: Upload test results (junit)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: junit-results
+          path: results.xml
+
+      - name: Upload coverage report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-xml
+          path: coverage.xml
+
+      - name: Upload virtualenv (optional, useful for debugging)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: venv-directory
+          path: .venv
+          retention-days: 3
