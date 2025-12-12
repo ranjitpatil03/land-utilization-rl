@@ -1,0 +1,12 @@
+{
+  "id": "mumbai_case",
+  "description": "test case for CI - minimal values; plot_size is numeric",
+  "inputs": {
+    "regulations_url": "https://example.com/regulations.pdf"
+  },
+  "plot_size": 1200,
+  "features": [],
+  "meta": {
+    "created_by": "ci-placeholder"
+  }
+}
