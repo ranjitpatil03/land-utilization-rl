@@ -1,0 +1,62 @@
+{
+  "case": {
+    "id": "mumbai_case",
+    "description": "test case for CI - minimal values; plot_size is numeric",
+    "inputs": {
+      "regulations_url": "https://example.com/regulations.pdf"
+    },
+    "plot_size": 1200,
+    "features": [],
+    "meta": {
+      "created_by": "ci-placeholder"
+    }
+  },
+  "selected_rules": [
+    "R-COVERAGE",
+    "R-FAR"
+  ],
+  "calc": {
+    "inputs": {
+      "id": "mumbai_case",
+      "description": "test case for CI - minimal values; plot_size is numeric",
+      "inputs": {
+        "regulations_url": "https://example.com/regulations.pdf"
+      },
+      "plot_size": 1200,
+      "features": [],
+      "meta": {
+        "created_by": "ci-placeholder"
+      }
+    },
+    "setback_m": 1.5,
+    "max_footprint_sqm": 660.0,
+    "total_floor_area_sqm": 1800.0,
+    "steps": [
+      {
+        "rule": "R-SETBACK-URBAN",
+        "calc": "road_width=None -> setback=1.5m"
+      },
+      {
+        "rule": "R-COVERAGE",
+        "calc": "location=default -> coverage=0.55"
+      },
+      {
+        "rule": "R-FAR",
+        "calc": "location=default -> FAR=1.50"
+      },
+      {
+        "rule": "RESULTS",
+        "calc": "max_footprint=660.00 sq.m, total_FAR_area=1800.00 sq.m"
+      }
+    ]
+  },
+  "rl": {
+    "chosen_rule_path": [
+      "R-COVERAGE",
+      "R-FAR"
+    ],
+    "rl_metrics": {
+      "avg_reward": -0.2
+    }
+  }
+}
